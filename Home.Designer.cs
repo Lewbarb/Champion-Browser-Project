@@ -33,7 +33,7 @@
             this.buttonSettings = new System.Windows.Forms.Button();
             this.buttonDark = new System.Windows.Forms.Button();
             this.buttonLight = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCommit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labeExamle1
@@ -91,15 +91,15 @@
             this.buttonLight.UseVisualStyleBackColor = true;
             this.buttonLight.Click += new System.EventHandler(this.buttonLight_Click);
             // 
-            // button1
+            // btnCommit
             // 
-            this.button1.Location = new System.Drawing.Point(284, 133);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCommit.Location = new System.Drawing.Point(284, 133);
+            this.btnCommit.Name = "btnCommit";
+            this.btnCommit.Size = new System.Drawing.Size(75, 23);
+            this.btnCommit.TabIndex = 5;
+            this.btnCommit.Text = "Commit";
+            this.btnCommit.UseVisualStyleBackColor = true;
+            this.btnCommit.Click += new System.EventHandler(this.button1_Click);
             // 
             // homeForm
             // 
@@ -107,7 +107,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(413, 587);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCommit);
             this.Controls.Add(this.buttonLight);
             this.Controls.Add(this.buttonDark);
             this.Controls.Add(this.buttonSettings);
@@ -129,7 +129,7 @@
         private System.Windows.Forms.Button buttonSettings;
         private System.Windows.Forms.Button buttonDark;
         private System.Windows.Forms.Button buttonLight;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCommit;
     }
 }
 

@@ -8,18 +8,23 @@ namespace ChampionBrowser
 {
     class updatedb
     {
-        public static void pushDB()
+        public static void pushDB(string inName, string inPassive, int inBasead)
         {
             using (ChampionsModel context = new ChampionsModel())
             {
+                //context.tblTests.Find("Jinx");
                 tblTest champion = new tblTest
                 {
-                    name = "test"//,passive = "Get Exited", basead = 625
+                    name = inName, passive = inPassive, basead = inBasead
                 };
-                context.tblTests.Add(champion);
+                try
+                {
+                    context.tblTests.Add(champion);
+                }
+                catch { }
                 context.SaveChanges();
+                //context.SaveChangesAsync();
             }
-            
         }
     }
 }
