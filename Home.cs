@@ -57,6 +57,7 @@ namespace ChampionBrowser
         private void buttonDark_Click(object sender, EventArgs e)
         {
             this.BackColor = Color.DarkGray;
+
         }
 
         private void buttonLight_Click(object sender, EventArgs e)
@@ -66,7 +67,15 @@ namespace ChampionBrowser
 
         private void button1_Click(object sender, EventArgs e)
         {
-            updatedb.pushDB();
+            string name;
+            string passive;
+            int basead;
+            //updatedb.pushDB(name, passive, basead);
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            updatedb.selectDB();
         }
     }
 }

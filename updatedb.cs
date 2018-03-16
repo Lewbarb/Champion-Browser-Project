@@ -27,18 +27,37 @@ namespace ChampionBrowser
         }
 
 
-        public static void getDB()
+        public List<string> getDB()//needs tested
         {
             //context.tblTests.Find("Jinx");
-            List<String> champList = new List<String>();
+            //List<String> champList = new List<String>();
             using (var db = new ChampionsModel())
             {
                 var query = (from c in db.tblTests
                              where c.name == "Jinx"
-                             select new { c.passive, c.basead };
-                return query.ToList();//fix this
+                             select new { c.passive, c.basead });
+                query.ToString();
+                var test = query.ToString();
+                List<String> result = new List<string>();
+                result.Add(test);
+                return result;
             }
         }
+
+
+        public static void selectDB()//needs tested
+        {
+            using (ChampionsModel context = new ChampionsModel())
+            {
+                tblTest champion = context.tblTests.FirstOrDefault(r => r.name == "Jinx");
+                Console.WriteLine(champion);
+                Console.ReadLine();
+            }
+        }
+
+
+
+
 
     }
 }
