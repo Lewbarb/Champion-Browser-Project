@@ -8,11 +8,10 @@ namespace ChampionBrowser
 {
     class updatedb
     {
-        public static void pushDB(string inName, string inPassive, int inBasead)
+        public static void pushDB(string inName, string inPassive, int inBasead)//adds items to database
         {
             using (ChampionsModel context = new ChampionsModel())
             {
-                //context.tblTests.Find("Jinx");
                 tblTest champion = new tblTest
                 {
                     name = inName, passive = inPassive, basead = inBasead
@@ -26,5 +25,20 @@ namespace ChampionBrowser
                 //context.SaveChangesAsync();
             }
         }
+
+
+        public static void getDB()
+        {
+            //context.tblTests.Find("Jinx");
+            List<String> champList = new List<String>();
+            using (var db = new ChampionsModel())
+            {
+                var query = (from c in db.tblTests
+                             where c.name == "Jinx"
+                             select new { c.passive, c.basead };
+                return query.ToList();//fix this
+            }
+        }
+
     }
 }
