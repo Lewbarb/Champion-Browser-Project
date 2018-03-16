@@ -49,8 +49,10 @@ namespace ChampionBrowser
         {
             using (ChampionsModel context = new ChampionsModel())
             {
-                tblTest champion = context.tblTests.FirstOrDefault(r => r.name == "Jinx");
-                Console.WriteLine(champion);
+                tblTest champion = context.tblTests.FirstOrDefault(r => r.name == "Sion");
+                Console.WriteLine(champion.name);
+                Console.WriteLine(champion.passive);
+                Console.WriteLine(champion.basead);
                 Console.ReadLine();
             }
         }

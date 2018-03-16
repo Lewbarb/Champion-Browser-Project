@@ -57,7 +57,6 @@ namespace ChampionBrowser
         private void buttonDark_Click(object sender, EventArgs e)
         {
             this.BackColor = Color.DarkGray;
-
         }
 
         private void buttonLight_Click(object sender, EventArgs e)
