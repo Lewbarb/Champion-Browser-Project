@@ -34,7 +34,6 @@
             this.buttonDark = new System.Windows.Forms.Button();
             this.buttonLight = new System.Windows.Forms.Button();
             this.btnCommit = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labeExamle1
@@ -102,23 +101,12 @@
             this.btnCommit.UseVisualStyleBackColor = true;
             this.btnCommit.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(95, 132);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
-            // 
             // homeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(413, 587);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCommit);
             this.Controls.Add(this.buttonLight);
             this.Controls.Add(this.buttonDark);
@@ -142,7 +130,6 @@
         private System.Windows.Forms.Button buttonDark;
         private System.Windows.Forms.Button buttonLight;
         private System.Windows.Forms.Button btnCommit;
-        private System.Windows.Forms.Button button1;
     }
 }
 

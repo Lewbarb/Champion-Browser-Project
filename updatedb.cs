@@ -8,13 +8,15 @@ namespace ChampionBrowser
 {
     class updatedb
     {
-        public static void pushDB(string inName, string inPassive, int inBasead)//adds items to database
+        //public static void pushDB(string inName, string inPassive, int inBasead)//adds items to database
+        public static void pushDB()
         {
             using (ChampionsModel context = new ChampionsModel())
             {
                 tblTest champion = new tblTest
                 {
-                    name = inName, passive = inPassive, basead = inBasead
+                    //name = inName, passive = inPassive, basead = inBasead
+                    name = "Xayah", basead=64, passive="Clean Cuts"
                 };
                 try
                 {
@@ -34,7 +36,7 @@ namespace ChampionBrowser
             using (var db = new ChampionsModel())
             {
                 var query = (from c in db.tblTests
-                             where c.name == "Jinx"
+                             where c.name == "Xayah"
                              select new { c.passive, c.basead });
                 query.ToString();
                 var test = query.ToString();
@@ -49,11 +51,11 @@ namespace ChampionBrowser
         {
             using (ChampionsModel context = new ChampionsModel())
             {
-                tblTest champion = context.tblTests.FirstOrDefault(r => r.name == "Sion");
-                Console.WriteLine(champion.name);
-                Console.WriteLine(champion.passive);
-                Console.WriteLine(champion.basead);
-                Console.ReadLine();
+                tblTest champion = context.tblTests.FirstOrDefault(r => r.name == "Xayah");
+                Console.WriteLine("You chose " + champion.name);
+                Console.WriteLine("Their passive is "+ champion.passive);
+                Console.WriteLine("Base AD is " + champion.basead);
+                //Console.ReadLine();
             }
         }
 
