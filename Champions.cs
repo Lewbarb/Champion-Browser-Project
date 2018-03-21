@@ -38,5 +38,10 @@ namespace ChampionBrowser
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            updatedb.selectDB();
+        }
     }
 }

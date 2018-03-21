@@ -1,55 +1,59 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace ChampionBrowser
 {
-    class Champion
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
+
+    public partial class champion
     {
-        //champion atrributes
-        string name;
-        int basehp;
-        int hpregen;
-        int basemana;
-        int basemanaregen;
-        int range;
-        int basead;
-        int baseatckspeed;
-        int baseap;
-        int basearmour;
-        int basemr;
-        int basespeed;
-        int bluePrice;
-        int rpPrice;
-        string Q;
-        string W;
-        string E;
-        string R;
+        [Key]
+        [StringLength(20)]
+        public string name { get; set; }
 
-        //add more
+        public int basehp { get; set; }
 
-        Champion (string name, int basehp, int basemana, int basead, int baseap, int basearmor, int basemr)//Champion constructor
-        {
-            this.name = name;
-            this.basehp = basehp; //health
-            this.hpregen = hpregen; //health regen
-            this.basemana = basemana;
-            this.basemanaregen = basemanaregen;
-            this.range = range;
-            this.basead = basead; //attack damage
-            this.baseatckspeed = baseatckspeed; //attack speed
-            this.baseap = baseap; //ability power
-            this.basearmour = basearmour;
-            this.basemr = basemr; //magic resist
-            this.basespeed = basespeed;
-            this.bluePrice = bluePrice; //blue essence required to purchase
-            this.rpPrice = rpPrice; //riot points required to purchase
-            this.Q = Q;
-            this.W = W;
-            this.E = E;
-            this.R =R;
-        }
+        public int hpregen { get; set; }
+
+        public int basemana { get; set; }
+
+        public int basemanaregen { get; set; }
+
+        public int range { get; set; }
+
+        public int basead { get; set; }
+
+        public double baseattackspeed { get; set; }
+
+        public int basearmour { get; set; }
+
+        public int basemr { get; set; }
+
+        public int basespeed { get; set; }
+
+        public int bluePrice { get; set; }
+
+        public int rpPrice { get; set; }
+
+        [Required]
+        [StringLength(20)]
+        public string Q { get; set; }
+
+        [Required]
+        [StringLength(20)]
+        public string W { get; set; }
+
+        [Required]
+        [StringLength(20)]
+        public string E { get; set; }
+
+        [Required]
+        [StringLength(20)]
+        public string R { get; set; }
+
+        [Required]
+        [StringLength(20)]
+        public string passive { get; set; }
     }
 }
