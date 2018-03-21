@@ -29,15 +29,16 @@ namespace ChampionBrowser
         }
 
 
-        public List<string> getDB()//needs tested
+        public static List<string> getDB()//needs tested
         {
             //context.tblTests.Find("Jinx");
             //List<String> champList = new List<String>();
             using (var db = new ChampionsModel())
             {
                 var query = (from c in db.tblTests
-                             where c.name == "Xayah"
-                             select new { c.passive, c.basead });
+                             //where c.name == "Xayah"
+
+                             select new { c.name, c.passive, c.basead });//test this pls
                 query.ToString();
                 var test = query.ToString();
                 List<String> result = new List<string>();
@@ -58,10 +59,5 @@ namespace ChampionBrowser
                 //Console.ReadLine();
             }
         }
-
-
-
-
-
     }
 }

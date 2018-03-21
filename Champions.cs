@@ -31,7 +31,7 @@ namespace ChampionBrowser
 
         private void textboxImage0_TextChanged(object sender, EventArgs e)
         {
-
+            var champion = updatedb.getDB();
         }
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
