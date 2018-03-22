@@ -43,7 +43,7 @@ namespace ChampionBrowser
                              from c in db.champions
                              where c.name == "Lissandra"
 
-                             select new { /*c.name,*/ c.passive, c.basead });//test this pls
+                             select new { /*c.name,*/ c.passive, c.basead, c.imageLink });//test this pls
                 query.ToString();
                 var test = query.ToString();
                 List<String> result = new List<string>();
@@ -63,6 +63,7 @@ namespace ChampionBrowser
                 Console.WriteLine("You chose " + champion.name);
                 Console.WriteLine("Their passive is "+ champion.passive);
                 Console.WriteLine("Base AD is " + champion.basead);
+                Console.WriteLine("Image link is " + champion.imageLink);
                 //Console.ReadLine();
             }
         }
