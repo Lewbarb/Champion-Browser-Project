@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ChampionBrowser
 {
-    public partial class SearchWindow : Form
+    public partial class uploadWindow : Form
     {
-        public SearchWindow()
+        public uploadWindow()
         {
             InitializeComponent();
         }
@@ -24,11 +24,24 @@ namespace ChampionBrowser
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string name = textBoxSearchName.Text;
+            string name = textBoxName.Text;
             champion result = updatedb.searchDB(name);
-            lblName.Text = result.name;
-            lblBluePrice.Text = result.bluePrice.ToString();
-            lblPassive.Text = result.passive;
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxChampionImage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnImg_Click(object sender, EventArgs e)
+        {
+            pictureBoxChampionImage.Load(textBoxIMGURL.Text);
         }
     }
 }

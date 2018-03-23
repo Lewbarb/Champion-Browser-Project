@@ -33,8 +33,6 @@ namespace ChampionBrowser
         {
             Champions champ = new Champions();
             champ.Show();
-            this.Hide();
-            //this.Close();
         }
 
         
@@ -84,7 +82,7 @@ namespace ChampionBrowser
 
         private void btnOpenSearch_Click(object sender, EventArgs e)
         {
-            SearchWindow window = new SearchWindow();
+            uploadWindow window = new uploadWindow();
             window.Show();
         }
     }

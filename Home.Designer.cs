@@ -34,7 +34,7 @@
             this.buttonDark = new System.Windows.Forms.Button();
             this.buttonLight = new System.Windows.Forms.Button();
             this.btnCommit = new System.Windows.Forms.Button();
-            this.btnOpenSearch = new System.Windows.Forms.Button();
+            this.btnUpload = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labeExamle1
@@ -102,15 +102,15 @@
             this.btnCommit.UseVisualStyleBackColor = true;
             this.btnCommit.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnOpenSearch
+            // btnUpload
             // 
-            this.btnOpenSearch.Location = new System.Drawing.Point(36, 133);
-            this.btnOpenSearch.Name = "btnOpenSearch";
-            this.btnOpenSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnOpenSearch.TabIndex = 6;
-            this.btnOpenSearch.Text = "Search";
-            this.btnOpenSearch.UseVisualStyleBackColor = true;
-            this.btnOpenSearch.Click += new System.EventHandler(this.btnOpenSearch_Click);
+            this.btnUpload.Location = new System.Drawing.Point(36, 133);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(75, 23);
+            this.btnUpload.TabIndex = 6;
+            this.btnUpload.Text = "Upload";
+            this.btnUpload.UseVisualStyleBackColor = true;
+            this.btnUpload.Click += new System.EventHandler(this.btnOpenSearch_Click);
             // 
             // homeForm
             // 
@@ -118,7 +118,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(413, 587);
-            this.Controls.Add(this.btnOpenSearch);
+            this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.btnCommit);
             this.Controls.Add(this.buttonLight);
             this.Controls.Add(this.buttonDark);
@@ -142,7 +142,7 @@
         private System.Windows.Forms.Button buttonDark;
         private System.Windows.Forms.Button buttonLight;
         private System.Windows.Forms.Button btnCommit;
-        private System.Windows.Forms.Button btnOpenSearch;
+        private System.Windows.Forms.Button btnUpload;
     }
 }
 
