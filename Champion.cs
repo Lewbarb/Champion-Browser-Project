@@ -53,9 +53,9 @@ namespace ChampionBrowser
         public string R { get; set; }
 
         [Required]
-        [StringLength(20)]
-        public string passive { get; set; }
         [StringLength(50)]
+        public string passive { get; set; }
+        [StringLength(200)]
         public string imageLink { get; set; }
     }
 }

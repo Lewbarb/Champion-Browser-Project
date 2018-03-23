@@ -68,6 +68,25 @@ namespace ChampionBrowser
             }
         }
         
+
+        public static List<champion> championList()
+        {
+            //List<champion> myList = new List<champion>();
+            using (cloudChampionsModel champs = new cloudChampionsModel())
+            {
+                var champList = champs.champions;
+                var db = champList.ToList();//creates list of every champion in database as an object into the variable 'db'
+                //db.Find(c => c.name == "Lissandra");
+                return champList.ToList();
+
+            }
+        }
+
+
+
+
+
+        
         public static void selectDBtest()//needs tested
         {
             //using (ChampionsModel context = new ChampionsModel())

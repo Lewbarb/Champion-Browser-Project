@@ -43,5 +43,14 @@ namespace ChampionBrowser
         {
             pictureBoxChampionImage.Load(textBoxIMGURL.Text);
         }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            var db = updatedb.championList();
+            foreach (champion c in db)
+            {
+                Console.WriteLine(c.name);
+            }
+        }
     }
 }

@@ -30,11 +30,11 @@
         {
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.btnUpload = new System.Windows.Forms.Button();
-            this.textBoxhp = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxHP = new System.Windows.Forms.TextBox();
+            this.textBoxHPRegen = new System.Windows.Forms.TextBox();
+            this.textBoxMana = new System.Windows.Forms.TextBox();
+            this.textBoxManaRegen = new System.Windows.Forms.TextBox();
+            this.j = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -42,6 +42,7 @@
             this.textBoxIMGURL = new System.Windows.Forms.TextBox();
             this.pictureBoxChampionImage = new System.Windows.Forms.PictureBox();
             this.btnImg = new System.Windows.Forms.Button();
+            this.btnTest = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChampionImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,42 +64,46 @@
             this.btnUpload.UseVisualStyleBackColor = true;
             this.btnUpload.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // textBoxhp
+            // textBoxHP
             // 
-            this.textBoxhp.Location = new System.Drawing.Point(12, 49);
-            this.textBoxhp.Name = "textBoxhp";
-            this.textBoxhp.Size = new System.Drawing.Size(100, 20);
-            this.textBoxhp.TabIndex = 2;
-            this.textBoxhp.Text = "Base HP";
-            this.textBoxhp.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBoxHP.Location = new System.Drawing.Point(12, 49);
+            this.textBoxHP.Name = "textBoxHP";
+            this.textBoxHP.Size = new System.Drawing.Size(100, 20);
+            this.textBoxHP.TabIndex = 2;
+            this.textBoxHP.Text = "Base HP";
+            this.textBoxHP.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // textBoxHPRegen
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 75);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.textBoxHPRegen.Location = new System.Drawing.Point(12, 75);
+            this.textBoxHPRegen.Name = "textBoxHPRegen";
+            this.textBoxHPRegen.Size = new System.Drawing.Size(100, 20);
+            this.textBoxHPRegen.TabIndex = 3;
+            this.textBoxHPRegen.Text = "Base HP Regen";
             // 
-            // textBox3
+            // textBoxMana
             // 
-            this.textBox3.Location = new System.Drawing.Point(12, 101);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 4;
+            this.textBoxMana.Location = new System.Drawing.Point(12, 101);
+            this.textBoxMana.Name = "textBoxMana";
+            this.textBoxMana.Size = new System.Drawing.Size(100, 20);
+            this.textBoxMana.TabIndex = 4;
+            this.textBoxMana.Tag = "";
+            this.textBoxMana.Text = "Base Mana";
             // 
-            // textBox4
+            // textBoxManaRegen
             // 
-            this.textBox4.Location = new System.Drawing.Point(12, 127);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 5;
+            this.textBoxManaRegen.Location = new System.Drawing.Point(12, 127);
+            this.textBoxManaRegen.Name = "textBoxManaRegen";
+            this.textBoxManaRegen.Size = new System.Drawing.Size(100, 20);
+            this.textBoxManaRegen.TabIndex = 5;
+            this.textBoxManaRegen.Text = "Base Mana Regen";
             // 
-            // textBox5
+            // j
             // 
-            this.textBox5.Location = new System.Drawing.Point(12, 155);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 6;
+            this.j.Location = new System.Drawing.Point(12, 155);
+            this.j.Name = "j";
+            this.j.Size = new System.Drawing.Size(100, 20);
+            this.j.TabIndex = 6;
             // 
             // textBox6
             // 
@@ -157,11 +162,22 @@
             this.btnImg.UseVisualStyleBackColor = true;
             this.btnImg.Click += new System.EventHandler(this.btnImg_Click);
             // 
+            // btnTest
+            // 
+            this.btnTest.Location = new System.Drawing.Point(187, 23);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(75, 23);
+            this.btnTest.TabIndex = 14;
+            this.btnTest.Text = "test";
+            this.btnTest.UseVisualStyleBackColor = true;
+            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
+            // 
             // uploadWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(340, 497);
+            this.Controls.Add(this.btnTest);
             this.Controls.Add(this.btnImg);
             this.Controls.Add(this.pictureBoxChampionImage);
             this.Controls.Add(this.textBoxIMGURL);
@@ -169,11 +185,11 @@
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBoxhp);
+            this.Controls.Add(this.j);
+            this.Controls.Add(this.textBoxManaRegen);
+            this.Controls.Add(this.textBoxMana);
+            this.Controls.Add(this.textBoxHPRegen);
+            this.Controls.Add(this.textBoxHP);
             this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.textBoxName);
             this.Name = "uploadWindow";
@@ -188,11 +204,11 @@
 
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.Button btnUpload;
-        private System.Windows.Forms.TextBox textBoxhp;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxHP;
+        private System.Windows.Forms.TextBox textBoxHPRegen;
+        private System.Windows.Forms.TextBox textBoxMana;
+        private System.Windows.Forms.TextBox textBoxManaRegen;
+        private System.Windows.Forms.TextBox j;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox8;
@@ -200,5 +216,6 @@
         private System.Windows.Forms.TextBox textBoxIMGURL;
         private System.Windows.Forms.PictureBox pictureBoxChampionImage;
         private System.Windows.Forms.Button btnImg;
+        private System.Windows.Forms.Button btnTest;
     }
 }
