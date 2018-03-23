@@ -31,7 +31,7 @@ namespace ChampionBrowser
 
         private void textboxImage0_TextChanged(object sender, EventArgs e)
         {
-            var champion = updatedb.getDB();
+            //var champion = updatedb.getDB();
         }
 
         private void textBoxSearch_TextChanged(object sender, EventArgs e)
@@ -41,7 +41,8 @@ namespace ChampionBrowser
 
         private void button2_Click(object sender, EventArgs e)
         {
-            updatedb.selectDB();
+            //updatedb.selectDBtest();
+
         }
     }
 }

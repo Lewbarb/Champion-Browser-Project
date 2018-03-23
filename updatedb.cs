@@ -32,7 +32,7 @@ namespace ChampionBrowser
         }
 
 
-        public static List<string> getDB()//needs tested
+        public static List<string> getDB(string searchName)//needs tested
         {
             //context.tblTests.Find("Jinx");
             //List<String> champList = new List<String>();
@@ -41,8 +41,8 @@ namespace ChampionBrowser
             {
                 var query = (//from c in db.tblTests
                              from c in db.champions
-                             where c.name == "Lissandra"
-
+                                 //where c.name == "Lissandra"
+                             where c.name == searchName
                              select new { /*c.name,*/ c.passive, c.basead, c.imageLink });//test this pls
                 query.ToString();
                 var test = query.ToString();
@@ -51,9 +51,24 @@ namespace ChampionBrowser
                 return result;
             }
         }
-
-
-        public static void selectDB()//needs tested
+        
+        public static champion searchDB(string searchName)//needs tested
+        {
+            //using (ChampionsModel context = new ChampionsModel())
+            using (cloudChampionsModel context = new cloudChampionsModel())
+            {
+                champion championObj = context.champions.FirstOrDefault(r => r.name == searchName);
+                //tblTest champion = context.tblTests.FirstOrDefault(r => r.name == "Xayah");
+                //Console.WriteLine("You chose " + champion.name);
+                //Console.WriteLine("Their passive is " + champion.passive);
+                //Console.WriteLine("Base AD is " + champion.basead);
+                //Console.WriteLine("Image link is " + champion.imageLink);
+                //Console.ReadLine();
+                return championObj;
+            }
+        }
+        
+        public static void selectDBtest()//needs tested
         {
             //using (ChampionsModel context = new ChampionsModel())
             using (cloudChampionsModel context = new cloudChampionsModel())

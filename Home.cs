@@ -74,12 +74,18 @@ namespace ChampionBrowser
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-            updatedb.selectDB();
+            //updatedb.selectDB();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             updatedb.pushDB();
+        }
+
+        private void btnOpenSearch_Click(object sender, EventArgs e)
+        {
+            SearchWindow window = new SearchWindow();
+            window.Show();
         }
     }
 }
