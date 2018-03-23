@@ -9,7 +9,7 @@ namespace ChampionBrowser
     class updatedb
     {
         //public static void pushDB(string inName, string inPassive, int inBasead)//adds items to database
-        public static void pushDB()
+        public static void pushDB(string name, int hp, int hpregen, int mana, int manaregen, int range, int ad, float attackspeed, int armour, int mr, int speed, int bluePrice, int rpPrice, string Q, string W, string E, string R, string passive, string imageLink)
         {
             //using (ChampionsModel context = new ChampionsModel())
             using (cloudChampionsModel context = new cloudChampionsModel())
@@ -18,7 +18,8 @@ namespace ChampionBrowser
                 champion champion = new champion
                 {
                     //name = inName, passive = inPassive, basead = inBasead
-                    name = "Xayah", basead=64, passive="Clean Cuts"
+                    //name = "Xayah", basead=64, passive="Clean Cuts"
+                    name = name, basehp = hp, hpregen = hpregen, basemana = mana, basemanaregen=manaregen, range = range, basead = ad, baseattackspeed = attackspeed, basearmour = armour, basemr = mr, basespeed = speed, bluePrice = bluePrice, rpPrice = rpPrice, Q = Q, W = W, E = E, R = R, passive = passive, imageLink = imageLink
                 };
                 try
                 {

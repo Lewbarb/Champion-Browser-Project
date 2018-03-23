@@ -77,7 +77,7 @@ namespace ChampionBrowser
 
         private void button2_Click(object sender, EventArgs e)
         {
-            updatedb.pushDB();
+            //updatedb.pushDB();
         }
 
         private void btnOpenSearch_Click(object sender, EventArgs e)
