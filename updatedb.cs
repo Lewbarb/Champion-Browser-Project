@@ -31,7 +31,28 @@ namespace ChampionBrowser
                 //context.SaveChangesAsync();
             }
         }
-
+        
+        public static void deleteRecord(string name)
+        {
+            //using (ChampionsModel context = new ChampionsModel())
+            using (cloudChampionsModel context = new cloudChampionsModel())
+            {
+                //tblTest champion = new tblTest
+                champion champion = new champion
+                {
+                    name = name,
+                };
+                try
+                {
+                    context.champions.Attach(champion);
+                    context.champions.Remove(champion);
+                    //context.tblTests.Add(champion);
+                }
+                catch { }
+                context.SaveChanges();
+                //context.SaveChangesAsync();
+            }
+        }
 
         public static List<string> getDB(string searchName)//needs tested
         {

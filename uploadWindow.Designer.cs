@@ -51,6 +51,8 @@
             this.textBoxW = new System.Windows.Forms.TextBox();
             this.textBoxE = new System.Windows.Forms.TextBox();
             this.textBoxR = new System.Windows.Forms.TextBox();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChampionImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -267,11 +269,33 @@
             this.textBoxR.Text = "R";
             this.textBoxR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(23, 430);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 25;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(253, 433);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 26;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // uploadWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(340, 497);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.textBoxR);
             this.Controls.Add(this.textBoxE);
             this.Controls.Add(this.textBoxW);
@@ -328,5 +352,7 @@
         private System.Windows.Forms.TextBox textBoxW;
         private System.Windows.Forms.TextBox textBoxE;
         private System.Windows.Forms.TextBox textBoxR;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnSearch;
     }
 }

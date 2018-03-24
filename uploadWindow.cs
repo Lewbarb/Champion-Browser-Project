@@ -48,29 +48,69 @@ namespace ChampionBrowser
 
         private void btnUpload_Click(object sender, EventArgs e)
         {
-            string name = textBoxName.Text;
-            int hp = Int32.Parse(textBoxHP.Text);
-            int hpregen = Int32.Parse(textBoxHPRegen.Text);
-            int mana = Int32.Parse(textBoxMana.Text);
-            int manaregen = Int32.Parse(textBoxManaRegen.Text);
-            int range = Int32.Parse(textBoxRange.Text);
-            int ad = Int32.Parse(textBoxBaseAD.Text);
-            float attackspeed = float.Parse(textBoxBaseattackspeed.Text);
-            int armour = Int32.Parse(textBoxBasearmour.Text);
-            int mr = Int32.Parse(textBoxBaseMR.Text);
-            int speed = Int32.Parse(textBoxBaseSpeed.Text);
-            int bluePrice = Int32.Parse(textBoxBluePrice.Text);
-            int rpPrice = Int32.Parse(textBoxRPCost.Text);
-            string passive = textBoxPassive.Text;
-            string Q = textBoxQ.Text;
-            string W = textBoxW.Text;
-            string E = textBoxE.Text;
-            string R = textBoxR.Text;
-            string imageLink = textBoxIMGURL.Text;
-            updatedb.pushDB(name, hp, hpregen, mana, manaregen, range, ad, attackspeed, armour, mr, speed, bluePrice, rpPrice, Q, W, E, R, passive, imageLink);
+            try
+            {
+                string name = textBoxName.Text;
+                int hp = Int32.Parse(textBoxHP.Text);
+                int hpregen = Int32.Parse(textBoxHPRegen.Text);
+                int mana = Int32.Parse(textBoxMana.Text);
+                int manaregen = Int32.Parse(textBoxManaRegen.Text);
+                int range = Int32.Parse(textBoxRange.Text);
+                int ad = Int32.Parse(textBoxBaseAD.Text);
+                int armour = Int32.Parse(textBoxBasearmour.Text);
+                float attackspeed = float.Parse(textBoxBaseattackspeed.Text);
+                int mr = Int32.Parse(textBoxBaseMR.Text);
+                int speed = Int32.Parse(textBoxBaseSpeed.Text);
+                int bluePrice = Int32.Parse(textBoxBluePrice.Text);
+                int rpPrice = Int32.Parse(textBoxRPCost.Text);
+                string passive = textBoxPassive.Text;
+                string Q = textBoxQ.Text;
+                string W = textBoxW.Text;
+                string E = textBoxE.Text;
+                string R = textBoxR.Text;
+                string imageLink = textBoxIMGURL.Text;
+                updatedb.pushDB(name, hp, hpregen, mana, manaregen, range, ad, attackspeed, armour, mr, speed, bluePrice, rpPrice, Q, W, E, R, passive, imageLink);
+            }catch { }
             //string name = textBoxName.Text;
             //champion result = updatedb.searchDB(name);
             //add an if check for string length
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string name = textBoxName.Text;
+            updatedb.deleteRecord(name);
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string name = textBoxName.Text;
+            var champ = updatedb.searchDB(name);
+            try
+            {
+                pictureBoxChampionImage.Load(champ.imageLink);
+                var balh = "hi";
+            }
+            catch { }
+            textBoxName.Text = champ.name;
+            textBoxIMGURL.Text = champ.imageLink;
+            textBoxHP.Text = champ.basehp.ToString();
+            textBoxHPRegen.Text = champ.basehp.ToString();
+            textBoxMana.Text = champ.basemana.ToString();
+            textBoxManaRegen.Text = champ.basemanaregen.ToString();
+            textBoxRange.Text = champ.range.ToString();
+            textBoxBaseAD.Text = champ.basead.ToString();
+            textBoxBaseattackspeed.Text = champ.baseattackspeed.ToString();
+            textBoxBasearmour.Text = champ.basearmour.ToString();
+            textBoxBaseMR.Text = champ.basemr.ToString();
+            textBoxBaseSpeed.Text = champ.basespeed.ToString();
+            textBoxBluePrice.Text = champ.bluePrice.ToString();
+            textBoxRPCost.Text = champ.rpPrice.ToString();
+            textBoxPassive.Text = champ.passive;
+            textBoxQ.Text = champ.Q;
+            textBoxW.Text = champ.W;
+            textBoxE.Text = champ.E;
+            textBoxR.Text = champ.R;
         }
     }
 }
