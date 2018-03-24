@@ -69,7 +69,12 @@ namespace ChampionBrowser
                 string E = textBoxE.Text;
                 string R = textBoxR.Text;
                 string imageLink = textBoxIMGURL.Text;
-                updatedb.pushDB(name, hp, hpregen, mana, manaregen, range, ad, attackspeed, armour, mr, speed, bluePrice, rpPrice, Q, W, E, R, passive, imageLink);
+                if (passive.Length <= 25 && 
+                    Q.Length <= 25 && 
+                    W.Length <= 25 &&  
+                    E.Length <= 25 && 
+                    R.Length <= 25)
+                 updatedb.pushDB(name, hp, hpregen, mana, manaregen, range, ad, attackspeed, armour, mr, speed, bluePrice, rpPrice, Q, W, E, R, passive, imageLink);
             }catch { }
             //string name = textBoxName.Text;
             //champion result = updatedb.searchDB(name);
@@ -89,7 +94,6 @@ namespace ChampionBrowser
             try
             {
                 pictureBoxChampionImage.Load(champ.imageLink);
-                var balh = "hi";
             }
             catch { }
             textBoxName.Text = champ.name;
@@ -111,6 +115,39 @@ namespace ChampionBrowser
             textBoxW.Text = champ.W;
             textBoxE.Text = champ.E;
             textBoxR.Text = champ.R;
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string name = textBoxName.Text;
+                int hp = Int32.Parse(textBoxHP.Text);
+                int hpregen = Int32.Parse(textBoxHPRegen.Text);
+                int mana = Int32.Parse(textBoxMana.Text);
+                int manaregen = Int32.Parse(textBoxManaRegen.Text);
+                int range = Int32.Parse(textBoxRange.Text);
+                int ad = Int32.Parse(textBoxBaseAD.Text);
+                int armour = Int32.Parse(textBoxBasearmour.Text);
+                float attackspeed = float.Parse(textBoxBaseattackspeed.Text);
+                int mr = Int32.Parse(textBoxBaseMR.Text);
+                int speed = Int32.Parse(textBoxBaseSpeed.Text);
+                int bluePrice = Int32.Parse(textBoxBluePrice.Text);
+                int rpPrice = Int32.Parse(textBoxRPCost.Text);
+                string passive = textBoxPassive.Text;
+                string Q = textBoxQ.Text;
+                string W = textBoxW.Text;
+                string E = textBoxE.Text;
+                string R = textBoxR.Text;
+                string imageLink = textBoxIMGURL.Text;
+                if (passive.Length <= 25 && 
+                    Q.Length <= 25 &&
+                    W.Length <= 25 &&
+                    E.Length <= 25 &&
+                    R.Length <= 25)
+                    updatedb.editRecord(name, hp, hpregen, mana, manaregen, range, ad, attackspeed, armour, mr, speed, bluePrice, rpPrice, Q, W, E, R, passive, imageLink);
+            }
+            catch { }
         }
     }
 }

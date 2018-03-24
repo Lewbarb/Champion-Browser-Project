@@ -31,7 +31,52 @@ namespace ChampionBrowser
                 //context.SaveChangesAsync();
             }
         }
-        
+
+
+        public static void editRecord(string name, int hp, int hpregen, int mana, int manaregen, int range, int ad, float attackspeed, int armour, int mr, int speed, int bluePrice, int rpPrice, string Q, string W, string E, string R, string passive, string imageLink)
+        {
+            //using (ChampionsModel context = new ChampionsModel())
+            using (cloudChampionsModel db = new cloudChampionsModel())
+            {
+                //tblTest champion = new tblTest
+                champion champion = new champion
+                {
+                    //name = inName, passive = inPassive, basead = inBasead
+                    //name = "Xayah", basead=64, passive="Clean Cuts"
+                    name = name,
+                    basehp = hp,
+                    hpregen = hpregen,
+                    basemana = mana,
+                    basemanaregen = manaregen,
+                    range = range,
+                    basead = ad,
+                    baseattackspeed = attackspeed,
+                    basearmour = armour,
+                    basemr = mr,
+                    basespeed = speed,
+                    bluePrice = bluePrice,
+                    rpPrice = rpPrice,
+                    Q = Q,
+                    W = W,
+                    E = E,
+                    R = R,
+                    passive = passive,
+                    imageLink = imageLink
+                };
+                var original = db.champions.Find(champion.name);
+                if (original != null)
+                {
+                    db.Entry(original).CurrentValues.SetValues(champion);
+                    db.SaveChanges();
+                }
+                
+                //db.champions.Attach(champion);
+                //db.SaveChanges();
+                //context.SaveChangesAsync();
+            }
+        }
+
+
         public static void deleteRecord(string name)
         {
             //using (ChampionsModel context = new ChampionsModel())
