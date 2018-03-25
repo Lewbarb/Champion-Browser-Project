@@ -10,17 +10,43 @@ using System.Windows.Forms;
 
 namespace ChampionBrowser
 {
-    public partial class uploadWindow : Form
+    public partial class champViewer : Form
     {
-        public uploadWindow()
+        public string text_Name { get; set; }
+        void fillData(string CreatorName)
+        {
+            var champ = updatedb.searchDB(CreatorName);
+            textBoxName.Text = champ.name;
+            textBoxIMGURL.Text = champ.imageLink;
+            try
+            {
+                pictureBoxChampionImage.Load(champ.imageLink);
+            }catch { }
+            textBoxHP.Text = champ.basehp.ToString();
+            textBoxHPRegen.Text = champ.basehp.ToString();
+            textBoxMana.Text = champ.basemana.ToString();
+            textBoxManaRegen.Text = champ.basemanaregen.ToString();
+            textBoxRange.Text = champ.range.ToString();
+            textBoxBaseAD.Text = champ.basead.ToString();
+            textBoxBaseattackspeed.Text = champ.baseattackspeed.ToString();
+            textBoxBasearmour.Text = champ.basearmour.ToString();
+            textBoxBaseMR.Text = champ.basemr.ToString();
+            textBoxBaseSpeed.Text = champ.basespeed.ToString();
+            textBoxBluePrice.Text = champ.bluePrice.ToString();
+            textBoxRPCost.Text = champ.rpPrice.ToString();
+            textBoxPassive.Text = champ.passive;
+            textBoxQ.Text = champ.Q;
+            textBoxW.Text = champ.W;
+            textBoxE.Text = champ.E;
+            textBoxR.Text = champ.R;
+        }
+
+        public champViewer(string CreatorName)
         {
             InitializeComponent();
-            if (textBoxName.Text != "Name")
-            {
-                updatedb.searchDB(textBoxName.Text);
-            }
+            //this.textBoxName.Text = CreatorName;
+            fillData(CreatorName);
         }
-        public string text_Name { get; set; }
         public string label_Name_Text
         {
             get
@@ -84,13 +110,14 @@ namespace ChampionBrowser
                 string E = textBoxE.Text;
                 string R = textBoxR.Text;
                 string imageLink = textBoxIMGURL.Text;
-                if (passive.Length <= 25 && 
-                    Q.Length <= 25 && 
-                    W.Length <= 25 &&  
-                    E.Length <= 25 && 
+                if (passive.Length <= 25 &&
+                    Q.Length <= 25 &&
+                    W.Length <= 25 &&
+                    E.Length <= 25 &&
                     R.Length <= 25)
-                 updatedb.pushDB(name, hp, hpregen, mana, manaregen, range, ad, attackspeed, armour, mr, speed, bluePrice, rpPrice, Q, W, E, R, passive, imageLink);
-            }catch { }
+                    updatedb.pushDB(name, hp, hpregen, mana, manaregen, range, ad, attackspeed, armour, mr, speed, bluePrice, rpPrice, Q, W, E, R, passive, imageLink);
+            }
+            catch { }
             //string name = textBoxName.Text;
             //champion result = updatedb.searchDB(name);
             //add an if check for string length
@@ -155,19 +182,15 @@ namespace ChampionBrowser
                 string E = textBoxE.Text;
                 string R = textBoxR.Text;
                 string imageLink = textBoxIMGURL.Text;
-                if (passive.Length <= 25 && 
+                if (passive.Length <= 25 &&
                     Q.Length <= 25 &&
                     W.Length <= 25 &&
                     E.Length <= 25 &&
-                    R.Length <= 25)
+                    R.Length <= 25 &&
+                    imageLink.Length <= 200)
                     updatedb.editRecord(name, hp, hpregen, mana, manaregen, range, ad, attackspeed, armour, mr, speed, bluePrice, rpPrice, Q, W, E, R, passive, imageLink);
             }
             catch { }
-        }
-
-        private void textBoxBaseSpeed_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

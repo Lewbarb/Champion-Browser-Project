@@ -37,19 +37,19 @@ namespace ChampionBrowser
         public int rpPrice { get; set; }
 
         [Required]
-        [StringLength(30)]
+        [StringLength(50)]
         public string Q { get; set; }
 
         [Required]
-        [StringLength(30)]
+        [StringLength(50)]
         public string W { get; set; }
 
         [Required]
-        [StringLength(30)]
+        [StringLength(50)]
         public string E { get; set; }
 
         [Required]
-        [StringLength(30)]
+        [StringLength(50)]
         public string R { get; set; }
 
         [Required]

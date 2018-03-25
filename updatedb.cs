@@ -119,18 +119,11 @@ namespace ChampionBrowser
             }
         }
         
-        public static champion searchDB(string searchName)//needs tested
+        public static champion searchDB(string searchName)//searched table for object with name equal to passed string
         {
-            //using (ChampionsModel context = new ChampionsModel())
             using (cloudChampionsModel context = new cloudChampionsModel())
             {
                 champion championObj = context.champions.FirstOrDefault(r => r.name == searchName);
-                //tblTest champion = context.tblTests.FirstOrDefault(r => r.name == "Xayah");
-                //Console.WriteLine("You chose " + champion.name);
-                //Console.WriteLine("Their passive is " + champion.passive);
-                //Console.WriteLine("Base AD is " + champion.basead);
-                //Console.WriteLine("Image link is " + champion.imageLink);
-                //Console.ReadLine();
                 return championObj;
             }
         }

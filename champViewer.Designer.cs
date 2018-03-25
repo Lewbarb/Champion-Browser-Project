@@ -1,6 +1,6 @@
 ﻿namespace ChampionBrowser
 {
-    partial class uploadWindow
+    partial class champViewer
     {
         /// <summary>
         /// Required designer variable.
@@ -26,7 +26,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        public void InitializeComponent()
         {
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.textBoxHP = new System.Windows.Forms.TextBox();
@@ -170,7 +170,7 @@
             // 
             // btnImg
             // 
-            this.btnImg.Location = new System.Drawing.Point(23, 462);
+            this.btnImg.Location = new System.Drawing.Point(132, 438);
             this.btnImg.Name = "btnImg";
             this.btnImg.Size = new System.Drawing.Size(75, 23);
             this.btnImg.TabIndex = 13;
@@ -197,6 +197,7 @@
             this.btnUpload.TabIndex = 15;
             this.btnUpload.Text = "Upload";
             this.btnUpload.UseVisualStyleBackColor = true;
+            this.btnUpload.Visible = false;
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
             // textBoxBaseSpeed
@@ -207,7 +208,6 @@
             this.textBoxBaseSpeed.TabIndex = 17;
             this.textBoxBaseSpeed.Text = "Base Speed";
             this.textBoxBaseSpeed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxBaseSpeed.TextChanged += new System.EventHandler(this.textBoxBaseSpeed_TextChanged);
             // 
             // textBoxBluePrice
             // 
@@ -280,11 +280,12 @@
             this.btnDelete.TabIndex = 25;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Visible = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(253, 433);
+            this.btnSearch.Location = new System.Drawing.Point(253, 430);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 26;
@@ -295,7 +296,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(132, 433);
+            this.btnEdit.Location = new System.Drawing.Point(23, 462);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 27;
@@ -303,7 +304,7 @@
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // uploadWindow
+            // champViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -334,7 +335,7 @@
             this.Controls.Add(this.textBoxHPRegen);
             this.Controls.Add(this.textBoxHP);
             this.Controls.Add(this.textBoxName);
-            this.Name = "uploadWindow";
+            this.Name = "champViewer";
             this.Text = "SearchWindow";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChampionImage)).EndInit();
             this.ResumeLayout(false);
@@ -371,7 +372,8 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnEdit;
-        /*public System.Windows.Forms.TextBox textBoxHP { get; set; }
+        /*public System.Windows.Forms.TextBox textBoxName { get; set; }
+        public System.Windows.Forms.TextBox textBoxHP { get; set; }
         public System.Windows.Forms.TextBox textBoxHPRegen { get; set; }
         public System.Windows.Forms.TextBox textBoxMana { get; set; }
         public System.Windows.Forms.TextBox textBoxManaRegen { get; set; }

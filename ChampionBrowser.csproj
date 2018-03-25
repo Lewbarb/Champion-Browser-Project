@@ -65,6 +65,12 @@
       <DependentUpon>Champions.cs</DependentUpon>
     </Compile>
     <Compile Include="ChampionsModel.cs" />
+    <Compile Include="champViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="champViewer.Designer.cs">
+      <DependentUpon>champViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="cloudChampionsModel.cs" />
     <Compile Include="global.cs" />
     <Compile Include="Home.cs">
@@ -91,6 +97,9 @@
     <Compile Include="updatedb.cs" />
     <EmbeddedResource Include="Champions.resx">
       <DependentUpon>Champions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="champViewer.resx">
+      <DependentUpon>champViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
