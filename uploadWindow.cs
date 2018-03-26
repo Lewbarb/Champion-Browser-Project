@@ -160,7 +160,25 @@ namespace ChampionBrowser
                     W.Length <= 25 &&
                     E.Length <= 25 &&
                     R.Length <= 25)
-                    updatedb.editRecord(name, hp, hpregen, mana, manaregen, range, ad, attackspeed, armour, mr, speed, bluePrice, rpPrice, Q, W, E, R, passive, imageLink);
+                    updatedb.editRecord(name, 
+                                        hp, 
+                                        hpregen,
+                                        mana, 
+                                        manaregen, 
+                                        range, 
+                                        ad, 
+                                        attackspeed, 
+                                        armour, 
+                                        mr, 
+                                        speed, 
+                                        bluePrice, 
+                                        rpPrice, 
+                                        Q, 
+                                        W, 
+                                        E, 
+                                        R, 
+                                        passive, 
+                                        imageLink);
             }
             catch { }
         }

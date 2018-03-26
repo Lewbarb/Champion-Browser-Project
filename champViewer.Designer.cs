@@ -41,7 +41,6 @@
             this.textBoxIMGURL = new System.Windows.Forms.TextBox();
             this.pictureBoxChampionImage = new System.Windows.Forms.PictureBox();
             this.btnImg = new System.Windows.Forms.Button();
-            this.btnTest = new System.Windows.Forms.Button();
             this.btnUpload = new System.Windows.Forms.Button();
             this.textBoxBaseSpeed = new System.Windows.Forms.TextBox();
             this.textBoxBluePrice = new System.Windows.Forms.TextBox();
@@ -178,17 +177,6 @@
             this.btnImg.UseVisualStyleBackColor = true;
             this.btnImg.Click += new System.EventHandler(this.btnImg_Click);
             // 
-            // btnTest
-            // 
-            this.btnTest.Location = new System.Drawing.Point(253, 462);
-            this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(75, 23);
-            this.btnTest.TabIndex = 14;
-            this.btnTest.Text = "test";
-            this.btnTest.UseVisualStyleBackColor = true;
-            this.btnTest.Visible = false;
-            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
-            // 
             // btnUpload
             // 
             this.btnUpload.Location = new System.Drawing.Point(132, 462);
@@ -296,18 +284,20 @@
             // 
             // btnEdit
             // 
+            this.btnEdit.BackColor = System.Drawing.SystemColors.Control;
             this.btnEdit.Location = new System.Drawing.Point(23, 462);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 27;
             this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // champViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(340, 497);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnSearch);
@@ -321,7 +311,6 @@
             this.Controls.Add(this.textBoxBluePrice);
             this.Controls.Add(this.textBoxBaseSpeed);
             this.Controls.Add(this.btnUpload);
-            this.Controls.Add(this.btnTest);
             this.Controls.Add(this.btnImg);
             this.Controls.Add(this.pictureBoxChampionImage);
             this.Controls.Add(this.textBoxIMGURL);
@@ -335,6 +324,7 @@
             this.Controls.Add(this.textBoxHPRegen);
             this.Controls.Add(this.textBoxHP);
             this.Controls.Add(this.textBoxName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "champViewer";
             this.Text = "SearchWindow";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChampionImage)).EndInit();
@@ -359,7 +349,6 @@
         private System.Windows.Forms.TextBox textBoxIMGURL;
         private System.Windows.Forms.PictureBox pictureBoxChampionImage;
         private System.Windows.Forms.Button btnImg;
-        private System.Windows.Forms.Button btnTest;
         private System.Windows.Forms.Button btnUpload;
         private System.Windows.Forms.TextBox textBoxBaseSpeed;
         private System.Windows.Forms.TextBox textBoxBluePrice;

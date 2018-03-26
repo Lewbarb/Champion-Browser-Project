@@ -41,7 +41,6 @@
             this.textBoxIMGURL = new System.Windows.Forms.TextBox();
             this.pictureBoxChampionImage = new System.Windows.Forms.PictureBox();
             this.btnImg = new System.Windows.Forms.Button();
-            this.btnTest = new System.Windows.Forms.Button();
             this.btnUpload = new System.Windows.Forms.Button();
             this.textBoxBaseSpeed = new System.Windows.Forms.TextBox();
             this.textBoxBluePrice = new System.Windows.Forms.TextBox();
@@ -52,7 +51,6 @@
             this.textBoxE = new System.Windows.Forms.TextBox();
             this.textBoxR = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChampionImage)).BeginInit();
             this.SuspendLayout();
@@ -178,17 +176,6 @@
             this.btnImg.UseVisualStyleBackColor = true;
             this.btnImg.Click += new System.EventHandler(this.btnImg_Click);
             // 
-            // btnTest
-            // 
-            this.btnTest.Location = new System.Drawing.Point(253, 462);
-            this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(75, 23);
-            this.btnTest.TabIndex = 14;
-            this.btnTest.Text = "test";
-            this.btnTest.UseVisualStyleBackColor = true;
-            this.btnTest.Visible = false;
-            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
-            // 
             // btnUpload
             // 
             this.btnUpload.Location = new System.Drawing.Point(132, 462);
@@ -282,17 +269,6 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(253, 433);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 26;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Visible = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
             // btnEdit
             // 
             this.btnEdit.Location = new System.Drawing.Point(132, 433);
@@ -307,9 +283,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(340, 497);
             this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.textBoxR);
             this.Controls.Add(this.textBoxE);
@@ -320,7 +296,6 @@
             this.Controls.Add(this.textBoxBluePrice);
             this.Controls.Add(this.textBoxBaseSpeed);
             this.Controls.Add(this.btnUpload);
-            this.Controls.Add(this.btnTest);
             this.Controls.Add(this.btnImg);
             this.Controls.Add(this.pictureBoxChampionImage);
             this.Controls.Add(this.textBoxIMGURL);
@@ -334,6 +309,7 @@
             this.Controls.Add(this.textBoxHPRegen);
             this.Controls.Add(this.textBoxHP);
             this.Controls.Add(this.textBoxName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "uploadWindow";
             this.Text = "SearchWindow";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChampionImage)).EndInit();
@@ -358,7 +334,6 @@
         private System.Windows.Forms.TextBox textBoxIMGURL;
         private System.Windows.Forms.PictureBox pictureBoxChampionImage;
         private System.Windows.Forms.Button btnImg;
-        private System.Windows.Forms.Button btnTest;
         private System.Windows.Forms.Button btnUpload;
         private System.Windows.Forms.TextBox textBoxBaseSpeed;
         private System.Windows.Forms.TextBox textBoxBluePrice;
@@ -369,7 +344,6 @@
         private System.Windows.Forms.TextBox textBoxE;
         private System.Windows.Forms.TextBox textBoxR;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnEdit;
         /*public System.Windows.Forms.TextBox textBoxHP { get; set; }
         public System.Windows.Forms.TextBox textBoxHPRegen { get; set; }

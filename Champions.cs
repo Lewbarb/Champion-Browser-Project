@@ -71,9 +71,7 @@ namespace ChampionBrowser
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            string myName = listBoxChampionNames.SelectedItem.ToString();
-            champViewer test = new champViewer(myName);
-            test.Show();
+            
         }
     }
 }

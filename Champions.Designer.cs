@@ -32,7 +32,6 @@
             this.listBoxChampionNames = new System.Windows.Forms.ListBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btnOpen = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,32 +57,22 @@
             // 
             this.btnOpen.Location = new System.Drawing.Point(181, 12);
             this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(75, 23);
+            this.btnOpen.Size = new System.Drawing.Size(85, 23);
             this.btnOpen.TabIndex = 4;
-            this.btnOpen.Text = "View";
+            this.btnOpen.Text = "View and Edit";
             this.btnOpen.UseVisualStyleBackColor = true;
             this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Location = new System.Drawing.Point(181, 50);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 23);
-            this.btnEdit.TabIndex = 5;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // Champions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(291, 500);
-            this.Controls.Add(this.btnEdit);
+            this.ClientSize = new System.Drawing.Size(274, 298);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.listBoxChampionNames);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Champions";
             this.Text = "Champions";
             this.Load += new System.EventHandler(this.Champions_Load);
@@ -97,6 +86,5 @@
         private System.Windows.Forms.ListBox listBoxChampionNames;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Button btnOpen;
-        private System.Windows.Forms.Button btnEdit;
     }
 }
