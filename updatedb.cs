@@ -19,7 +19,26 @@ namespace ChampionBrowser
                 {
                     //name = inName, passive = inPassive, basead = inBasead
                     //name = "Xayah", basead=64, passive="Clean Cuts"
-                    name = name, basehp = hp, hpregen = hpregen, basemana = mana, basemanaregen=manaregen, range = range, basead = ad, baseattackspeed = attackspeed, basearmour = armour, basemr = mr, basespeed = speed, bluePrice = bluePrice, rpPrice = rpPrice, Q = Q, W = W, E = E, R = R, passive = passive, imageLink = imageLink
+                    //name = name, basehp = hp, hpregen = hpregen, basemana = mana, basemanaregen=manaregen, range = range, basead = ad, baseattackspeed = attackspeed, basearmour = armour, basemr = mr, basespeed = speed, bluePrice = bluePrice, rpPrice = rpPrice, Q = Q, W = W, E = E, R = R, passive = passive, imageLink = imageLink
+                    name = name.TrimEnd(),
+                    basehp = hp,
+                    hpregen = hpregen,
+                    basemana = mana,
+                    basemanaregen = manaregen,
+                    range = range,
+                    basead = ad,
+                    baseattackspeed = attackspeed,
+                    basearmour = armour,
+                    basemr = mr,
+                    basespeed = speed,
+                    bluePrice = bluePrice,
+                    rpPrice = rpPrice,
+                    Q = Q.TrimEnd(),
+                    W = W.TrimEnd(),
+                    E = E.TrimEnd(),
+                    R = R.TrimEnd(),
+                    passive = passive.TrimEnd(),
+                    imageLink = imageLink.TrimEnd()
                 };
                 try
                 {
@@ -43,7 +62,7 @@ namespace ChampionBrowser
                 {
                     //name = inName, passive = inPassive, basead = inBasead
                     //name = "Xayah", basead=64, passive="Clean Cuts"
-                    name = name,
+                    name = name.TrimEnd(),
                     basehp = hp,
                     hpregen = hpregen,
                     basemana = mana,
@@ -56,12 +75,12 @@ namespace ChampionBrowser
                     basespeed = speed,
                     bluePrice = bluePrice,
                     rpPrice = rpPrice,
-                    Q = Q,
-                    W = W,
-                    E = E,
-                    R = R,
-                    passive = passive,
-                    imageLink = imageLink
+                    Q = Q.TrimEnd(),
+                    W = W.TrimEnd(),
+                    E = E.TrimEnd(),
+                    R = R.TrimEnd(),
+                    passive = passive.TrimEnd(),
+                    imageLink = imageLink.TrimEnd()
                 };
                 var original = db.champions.Find(champion.name);
                 if (original != null)

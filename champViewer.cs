@@ -138,7 +138,7 @@ namespace ChampionBrowser
                 pictureBoxChampionImage.Load(champ.imageLink);
             }
             catch { }
-            textBoxName.Text = champ.name;
+            textBoxName.Text = champ.name.TrimEnd();
             textBoxIMGURL.Text = champ.imageLink;
             textBoxHP.Text = champ.basehp.ToString();
             textBoxHPRegen.Text = champ.basehp.ToString();
@@ -152,18 +152,18 @@ namespace ChampionBrowser
             textBoxBaseSpeed.Text = champ.basespeed.ToString();
             textBoxBluePrice.Text = champ.bluePrice.ToString();
             textBoxRPCost.Text = champ.rpPrice.ToString();
-            textBoxPassive.Text = champ.passive;
-            textBoxQ.Text = champ.Q;
-            textBoxW.Text = champ.W;
-            textBoxE.Text = champ.E;
-            textBoxR.Text = champ.R;
+            textBoxPassive.Text = champ.passive.TrimEnd();
+            textBoxQ.Text = champ.Q.TrimEnd();
+            textBoxW.Text = champ.W.TrimEnd();
+            textBoxE.Text = champ.E.TrimEnd();
+            textBoxR.Text = champ.R.TrimEnd();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
             try
             {
-                string name = textBoxName.Text;
+                string name = textBoxName.Text.TrimEnd();
                 int hp = Int32.Parse(textBoxHP.Text);
                 int hpregen = Int32.Parse(textBoxHPRegen.Text);
                 int mana = Int32.Parse(textBoxMana.Text);
@@ -176,12 +176,12 @@ namespace ChampionBrowser
                 int speed = Int32.Parse(textBoxBaseSpeed.Text);
                 int bluePrice = Int32.Parse(textBoxBluePrice.Text);
                 int rpPrice = Int32.Parse(textBoxRPCost.Text);
-                string passive = textBoxPassive.Text;
-                string Q = textBoxQ.Text;
-                string W = textBoxW.Text;
-                string E = textBoxE.Text;
-                string R = textBoxR.Text;
-                string imageLink = textBoxIMGURL.Text;
+                string passive = textBoxPassive.Text.TrimEnd();
+                string Q = textBoxQ.Text.TrimEnd();
+                string W = textBoxW.Text.TrimEnd();
+                string E = textBoxE.Text.TrimEnd();
+                string R = textBoxR.Text.TrimEnd();
+                string imageLink = textBoxIMGURL.Text.TrimEnd();
                 if (passive.Length <= 25 &&
                     Q.Length <= 25 &&
                     W.Length <= 25 &&
@@ -191,6 +191,11 @@ namespace ChampionBrowser
                     updatedb.editRecord(name, hp, hpregen, mana, manaregen, range, ad, attackspeed, armour, mr, speed, bluePrice, rpPrice, Q, W, E, R, passive, imageLink);
             }
             catch { }
+        }
+
+        private void textBoxName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

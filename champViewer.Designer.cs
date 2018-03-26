@@ -64,6 +64,7 @@
             this.textBoxName.TabIndex = 0;
             this.textBoxName.Text = "Name";
             this.textBoxName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxName.TextChanged += new System.EventHandler(this.textBoxName_TextChanged);
             // 
             // textBoxHP
             // 
