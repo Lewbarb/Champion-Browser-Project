@@ -32,8 +32,6 @@
             this.buttonChamps = new System.Windows.Forms.Button();
             this.buttonSettings = new System.Windows.Forms.Button();
             this.buttonDark = new System.Windows.Forms.Button();
-            this.buttonLight = new System.Windows.Forms.Button();
-            this.btnCommit = new System.Windows.Forms.Button();
             this.btnUpload = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -66,9 +64,9 @@
             // 
             this.buttonSettings.Location = new System.Drawing.Point(260, 69);
             this.buttonSettings.Name = "buttonSettings";
-            this.buttonSettings.Size = new System.Drawing.Size(75, 23);
+            this.buttonSettings.Size = new System.Drawing.Size(99, 23);
             this.buttonSettings.TabIndex = 2;
-            this.buttonSettings.Text = "Settings";
+            this.buttonSettings.Text = "Colour Picker";
             this.buttonSettings.UseVisualStyleBackColor = true;
             this.buttonSettings.Click += new System.EventHandler(this.buttonSettings_Click);
             // 
@@ -82,29 +80,9 @@
             this.buttonDark.UseVisualStyleBackColor = true;
             this.buttonDark.Click += new System.EventHandler(this.buttonDark_Click);
             // 
-            // buttonLight
-            // 
-            this.buttonLight.Location = new System.Drawing.Point(338, 0);
-            this.buttonLight.Name = "buttonLight";
-            this.buttonLight.Size = new System.Drawing.Size(75, 23);
-            this.buttonLight.TabIndex = 4;
-            this.buttonLight.Text = "Light";
-            this.buttonLight.UseVisualStyleBackColor = true;
-            this.buttonLight.Click += new System.EventHandler(this.buttonLight_Click);
-            // 
-            // btnCommit
-            // 
-            this.btnCommit.Location = new System.Drawing.Point(284, 133);
-            this.btnCommit.Name = "btnCommit";
-            this.btnCommit.Size = new System.Drawing.Size(75, 23);
-            this.btnCommit.TabIndex = 5;
-            this.btnCommit.Text = "Commit";
-            this.btnCommit.UseVisualStyleBackColor = true;
-            this.btnCommit.Click += new System.EventHandler(this.button1_Click);
-            // 
             // btnUpload
             // 
-            this.btnUpload.Location = new System.Drawing.Point(36, 133);
+            this.btnUpload.Location = new System.Drawing.Point(157, 69);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(75, 23);
             this.btnUpload.TabIndex = 6;
@@ -117,10 +95,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(413, 587);
+            this.ClientSize = new System.Drawing.Size(413, 269);
             this.Controls.Add(this.btnUpload);
-            this.Controls.Add(this.btnCommit);
-            this.Controls.Add(this.buttonLight);
             this.Controls.Add(this.buttonDark);
             this.Controls.Add(this.buttonSettings);
             this.Controls.Add(this.buttonChamps);
@@ -140,8 +116,6 @@
         private System.Windows.Forms.Button buttonChamps;
         private System.Windows.Forms.Button buttonSettings;
         private System.Windows.Forms.Button buttonDark;
-        private System.Windows.Forms.Button buttonLight;
-        private System.Windows.Forms.Button btnCommit;
         private System.Windows.Forms.Button btnUpload;
     }
 }
