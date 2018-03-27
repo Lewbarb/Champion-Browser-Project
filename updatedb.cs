@@ -20,7 +20,7 @@ namespace ChampionBrowser
                     //name = inName, passive = inPassive, basead = inBasead
                     //name = "Xayah", basead=64, passive="Clean Cuts"
                     //name = name, basehp = hp, hpregen = hpregen, basemana = mana, basemanaregen=manaregen, range = range, basead = ad, baseattackspeed = attackspeed, basearmour = armour, basemr = mr, basespeed = speed, bluePrice = bluePrice, rpPrice = rpPrice, Q = Q, W = W, E = E, R = R, passive = passive, imageLink = imageLink
-                    name = name.TrimEnd(),
+                    name = name.Trim(),
                     basehp = hp,
                     hpregen = hpregen,
                     basemana = mana,
@@ -33,12 +33,12 @@ namespace ChampionBrowser
                     basespeed = speed,
                     bluePrice = bluePrice,
                     rpPrice = rpPrice,
-                    Q = Q.TrimEnd(),
-                    W = W.TrimEnd(),
-                    E = E.TrimEnd(),
-                    R = R.TrimEnd(),
-                    passive = passive.TrimEnd(),
-                    imageLink = imageLink.TrimEnd()
+                    Q = Q.Trim(),
+                    W = W.Trim(),
+                    E = E.Trim(),
+                    R = R.Trim(),
+                    passive = passive.Trim(),
+                    imageLink = imageLink.Trim()
                 };
                 try
                 {
@@ -86,6 +86,7 @@ namespace ChampionBrowser
                 if (original != null)
                 {
                     db.Entry(original).CurrentValues.SetValues(champion);
+                    var test = champion.passive;
                     db.SaveChanges();
                 }
                 

@@ -16,7 +16,7 @@ namespace ChampionBrowser
         void fillData(string CreatorName)
         {
             var champ = updatedb.searchDB(CreatorName);
-            textBoxName.Text = champ.name;
+            textBoxName.Text = champ.name.Trim();
             textBoxIMGURL.Text = champ.imageLink;
             try
             {
@@ -34,11 +34,11 @@ namespace ChampionBrowser
             textBoxBaseSpeed.Text = champ.basespeed.ToString();
             textBoxBluePrice.Text = champ.bluePrice.ToString();
             textBoxRPCost.Text = champ.rpPrice.ToString();
-            textBoxPassive.Text = champ.passive;
-            textBoxQ.Text = champ.Q;
-            textBoxW.Text = champ.W;
-            textBoxE.Text = champ.E;
-            textBoxR.Text = champ.R;
+            textBoxPassive.Text = champ.passive.Trim();
+            textBoxQ.Text = champ.Q.Trim();
+            textBoxW.Text = champ.W.Trim();
+            textBoxE.Text = champ.E.Trim();
+            textBoxR.Text = champ.R.Trim();
         }
 
         public champViewer(string CreatorName)

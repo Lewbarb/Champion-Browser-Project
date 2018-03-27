@@ -28,7 +28,7 @@ namespace ChampionBrowser
             //listBoxChampionNames.DataSource = myChampionList.ToString();
             foreach (champion c in myChampionList)
             {
-                listBoxChampionNames.Items.Add(c.name);
+                listBoxChampionNames.Items.Add(c.name.Trim());
             }
         }
 
