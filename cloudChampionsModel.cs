@@ -17,28 +17,28 @@ namespace ChampionBrowser
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<champion>()
-                .Property(e => e.name)
-                .IsFixedLength();
+                .Property(e => e.name);
+                //.IsFixedLength();
 
             modelBuilder.Entity<champion>()
-                .Property(e => e.Q)
-                .IsFixedLength();
+                .Property(e => e.Q);
+                //.IsFixedLength();
 
             modelBuilder.Entity<champion>()
-                .Property(e => e.W)
-                .IsFixedLength();
+                .Property(e => e.W);
+                //.IsFixedLength();
 
             modelBuilder.Entity<champion>()
-                .Property(e => e.E)
-                .IsFixedLength();
+                .Property(e => e.E);
+                //.IsFixedLength();
 
             modelBuilder.Entity<champion>()
-                .Property(e => e.R)
-                .IsFixedLength();
+                .Property(e => e.R);
+            //.IsFixedLength();
 
             modelBuilder.Entity<champion>()
-                .Property(e => e.passive)
-                .IsFixedLength();
+                .Property(e => e.passive);
+                //.IsFixedLength();
         }
     }
 }
