@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ChampionBrowser
 {
-    class updatedb
+    class updatedb//adds records to database
     {
-        //public static void pushDB(string inName, string inPassive, int inBasead)//adds items to database
+        //public static void pushDB(string inName, string inPassive, int inBasead)/
         public static void pushDB(string name, int hp, int hpregen, int mana, int manaregen, int range, int ad, float attackspeed, int armour, int mr, int speed, int bluePrice, int rpPrice, string Q, string W, string E, string R, string passive, string imageLink)
         {
             //using (ChampionsModel context = new ChampionsModel())
