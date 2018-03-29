@@ -12,10 +12,10 @@ namespace ChampionBrowser
         public static void pushDB(string name, int hp, int hpregen, int mana, int manaregen, int range, int ad, float attackspeed, int armour, int mr, int speed, int bluePrice, int rpPrice, string Q, string W, string E, string R, string passive, string imageLink)
         {
             //using (ChampionsModel context = new ChampionsModel())
-            using (cloudChampionsModel context = new cloudChampionsModel())
+            using (localdbChampionModel context = new localdbChampionModel())
             {
                 //tblTest champion = new tblTest
-                champion champion = new champion
+                tblChampionMetaData champion = new tblChampionMetaData
                 {
                     //name = inName, passive = inPassive, basead = inBasead
                     //name = "Xayah", basead=64, passive="Clean Cuts"
@@ -42,7 +42,7 @@ namespace ChampionBrowser
                 };
                 try
                 {
-                    context.champions.Add(champion);
+                    context.tblChampionMetaDatas.Add(champion);
                     //context.tblTests.Add(champion);
                 }
                 catch { }
@@ -55,10 +55,10 @@ namespace ChampionBrowser
         public static void editRecord(string name, int hp, int hpregen, int mana, int manaregen, int range, int ad, float attackspeed, int armour, int mr, int speed, int bluePrice, int rpPrice, string Q, string W, string E, string R, string passive, string imageLink)
         {
             //using (ChampionsModel context = new ChampionsModel())
-            using (cloudChampionsModel db = new cloudChampionsModel())
+            using (localdbChampionModel db = new localdbChampionModel())
             {
                 //tblTest champion = new tblTest
-                champion champion = new champion
+                tblChampionMetaData champion = new tblChampionMetaData
                 {
                     //name = inName, passive = inPassive, basead = inBasead
                     //name = "Xayah", basead=64, passive="Clean Cuts"
@@ -82,7 +82,7 @@ namespace ChampionBrowser
                     passive = passive.TrimEnd(),
                     imageLink = imageLink.TrimEnd()
                 };
-                var original = db.champions.Find(champion.name);
+                var original = db.tblChampionMetaDatas.Find(champion.name);
                 if (original != null)
                 {
                     db.Entry(original).CurrentValues.SetValues(champion);
@@ -100,17 +100,17 @@ namespace ChampionBrowser
         public static void deleteRecord(string name)
         {
             //using (ChampionsModel context = new ChampionsModel())
-            using (cloudChampionsModel context = new cloudChampionsModel())
+            using (localdbChampionModel context = new localdbChampionModel())
             {
                 //tblTest champion = new tblTest
-                champion champion = new champion
+                tblChampionMetaData champion = new tblChampionMetaData
                 {
                     name = name,
                 };
                 try
                 {
-                    context.champions.Attach(champion);
-                    context.champions.Remove(champion);
+                    context.tblChampionMetaDatas.Attach(champion);
+                    context.tblChampionMetaDatas.Remove(champion);
                     //context.tblTests.Add(champion);
                 }
                 catch { }
@@ -124,10 +124,10 @@ namespace ChampionBrowser
             //context.tblTests.Find("Jinx");
             //List<String> champList = new List<String>();
             //using (var db = new ChampionsModel())
-            using (var db = new cloudChampionsModel())
+            using (var db = new localdbChampionModel())
             {
                 var query = (//from c in db.tblTests
-                             from c in db.champions
+                             from c in db.tblChampionMetaDatas
                                  //where c.name == "Lissandra"
                              where c.name == searchName
                              select new { /*c.name,*/ c.passive, c.basead, c.imageLink });//test this pls
@@ -139,22 +139,22 @@ namespace ChampionBrowser
             }
         }
         
-        public static champion searchDB(string searchName)//searched table for object with name equal to passed string
+        public static tblChampionMetaData searchDB(string searchName)//searched table for object with name equal to passed string
         {
-            using (cloudChampionsModel context = new cloudChampionsModel())
+            using (localdbChampionModel context = new localdbChampionModel())
             {
-                champion championObj = context.champions.FirstOrDefault(r => r.name == searchName);
+                tblChampionMetaData championObj = context.tblChampionMetaDatas.FirstOrDefault(r => r.name == searchName);
                 return championObj;
             }
         }
         
 
-        public static List<champion> championList()
+        public static List<tblChampionMetaData> championList()
         {
             //List<champion> myList = new List<champion>();
-            using (cloudChampionsModel champs = new cloudChampionsModel())
+            using (localdbChampionModel champs = new localdbChampionModel())
             {
-                var champList = champs.champions;
+                var champList = champs.tblChampionMetaDatas;
                 var db = champList.ToList();//creates list of every champion in database as an object into the variable 'db'
                 //db.Find(c => c.name == "Lissandra");
                 return champList.ToList();
@@ -170,9 +170,9 @@ namespace ChampionBrowser
         public static void selectDBtest()//needs tested
         {
             //using (ChampionsModel context = new ChampionsModel())
-            using (cloudChampionsModel context = new cloudChampionsModel())
+            using (localdbChampionModel context = new localdbChampionModel())
             {
-                champion champion = context.champions.FirstOrDefault(r => r.name == "Lissandra");
+                tblChampionMetaData champion = context.tblChampionMetaDatas.FirstOrDefault(r => r.name == "Lissandra");
                 //tblTest champion = context.tblTests.FirstOrDefault(r => r.name == "Xayah");
                 Console.WriteLine("You chose " + champion.name);
                 Console.WriteLine("Their passive is "+ champion.passive);

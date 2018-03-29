@@ -26,7 +26,7 @@ namespace ChampionBrowser
         {
             var myChampionList = updatedb.championList().OrderBy(o => o.name);//creates alphabetical list of every champion in database
             //listBoxChampionNames.DataSource = myChampionList.ToString();
-            foreach (champion c in myChampionList)
+            foreach (tblChampionMetaData c in myChampionList)
             {
                 listBoxChampionNames.Items.Add(c.name.Trim());
             }
