@@ -90,6 +90,7 @@ namespace ChampionBrowser
                     E.Length <= 25 && 
                     R.Length <= 25)
                  updatedb.pushDB(name, hp, hpregen, mana, manaregen, range, ad, attackspeed, armour, mr, speed, bluePrice, rpPrice, Q, W, E, R, passive, imageLink);
+                this.Close();   
             }catch { }
             //string name = textBoxName.Text;
             //champion result = updatedb.searchDB(name);
