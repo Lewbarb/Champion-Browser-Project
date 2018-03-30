@@ -91,13 +91,20 @@ namespace ChampionBrowser
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            filter_listbox(textBoxSearch.Text);
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            listBoxChampionNames.Items.Clear();
-            fill_listbox();
+        }
+
+        private void textBoxSearch_TextChanged_1(object sender, EventArgs e)
+        {
+            filter_listbox(textBoxSearch.Text);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
