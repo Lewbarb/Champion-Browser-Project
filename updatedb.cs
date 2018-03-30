@@ -167,12 +167,14 @@ namespace ChampionBrowser
 
 
         
-        public static void selectDBtest()//needs tested
+        public static void selectDBtest()
         {
             //using (ChampionsModel context = new ChampionsModel())
             using (localdbChampionModel context = new localdbChampionModel())
             {
-                tblChampionMetaData champion = context.tblChampionMetaDatas.FirstOrDefault(r => r.name == "Lissandra");
+                tblChampionMetaData champion = context.tblChampionMetaDatas.FirstOrDefault(r => r.name == "Lissandra" && r.passive =="corki");
+                var result = context.tblChampionMetaDatas.Where(r => r.name == "Lissandra" && r.passive == "corki");
+                var mylist = championList();
                 //tblTest champion = context.tblTests.FirstOrDefault(r => r.name == "Xayah");
                 Console.WriteLine("You chose " + champion.name);
                 Console.WriteLine("Their passive is "+ champion.passive);

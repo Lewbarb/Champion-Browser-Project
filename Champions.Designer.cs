@@ -30,8 +30,11 @@
             this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.listBoxChampionNames = new System.Windows.Forms.ListBox();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btnOpen = new System.Windows.Forms.Button();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,12 +66,43 @@
             this.btnOpen.UseVisualStyleBackColor = true;
             this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.Location = new System.Drawing.Point(181, 42);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(85, 20);
+            this.textBoxSearch.TabIndex = 5;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(181, 69);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(85, 23);
+            this.btnSearch.TabIndex = 6;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.BackgroundImage = global::ChampionBrowser.Properties.Resources.refresh;
+            this.btnReset.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnReset.Location = new System.Drawing.Point(181, 243);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(32, 33);
+            this.btnReset.TabIndex = 7;
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // Champions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(274, 298);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.listBoxChampionNames);
             this.Controls.Add(this.button1);
@@ -78,6 +112,7 @@
             this.Load += new System.EventHandler(this.Champions_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -86,5 +121,8 @@
         private System.Windows.Forms.ListBox listBoxChampionNames;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Button btnOpen;
+        private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnReset;
     }
 }

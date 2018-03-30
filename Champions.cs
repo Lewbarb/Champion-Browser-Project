@@ -18,6 +18,7 @@ namespace ChampionBrowser
         {
             InitializeComponent();
             {
+                //btnReset.Image = Image.FromFile()
                 BackColor = Color.FromName(global.BackColor);
                 fill_listbox();
             }
@@ -29,6 +30,20 @@ namespace ChampionBrowser
             foreach (tblChampionMetaData c in myChampionList)
             {
                 listBoxChampionNames.Items.Add(c.name.Trim());
+            }
+        }
+        void filter_listbox(string searchName)
+        {
+            listBoxChampionNames.Items.Clear();
+            var myChampionList = updatedb.championList().OrderBy(o => o.name).ToList() ;//creates alphabetical list of every champion in database
+            foreach (tblChampionMetaData c in myChampionList.ToList())
+            {
+                if (!c.name.ToLower().Contains(searchName.ToLower()))
+                {
+                    myChampionList.Remove(c);
+                }
+                else
+                    listBoxChampionNames.Items.Add(c.name.Trim());
             }
         }
 
@@ -72,6 +87,17 @@ namespace ChampionBrowser
         private void btnEdit_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            filter_listbox(textBoxSearch.Text);
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            listBoxChampionNames.Items.Clear();
+            fill_listbox();
         }
     }
 }
