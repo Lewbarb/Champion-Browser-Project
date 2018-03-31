@@ -17,11 +17,8 @@ namespace ChampionBrowser
         public Champions()
         {
             InitializeComponent();
-            {
-                //btnReset.Image = Image.FromFile()
-                BackColor = Color.FromName(global.BackColor);
-                fill_listbox();
-            }
+            BackColor = Color.FromName(global.BackColor);
+            fill_listbox();
         }
         void fill_listbox()
         {

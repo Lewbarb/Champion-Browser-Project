@@ -12,6 +12,12 @@ namespace ChampionBrowser
 {
     public partial class champViewer : Form
     {
+        public champViewer(string CreatorName)
+        {
+            InitializeComponent();
+            BackColor = Color.FromName(global.BackColor);
+            fillData(CreatorName);
+        }
         public string text_Name { get; set; }
         void fillData(string CreatorName)
         {
@@ -41,12 +47,6 @@ namespace ChampionBrowser
             textBoxR.Text = champ.R.Trim();
         }
 
-        public champViewer(string CreatorName)
-        {
-            InitializeComponent();
-            //this.textBoxName.Text = CreatorName;
-            fillData(CreatorName);
-        }
         public string label_Name_Text
         {
             get

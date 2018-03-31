@@ -182,7 +182,7 @@
             this.btnImg.Name = "btnImg";
             this.btnImg.Size = new System.Drawing.Size(75, 23);
             this.btnImg.TabIndex = 13;
-            this.btnImg.Text = "Check";
+            this.btnImg.Text = "Check URL";
             this.btnImg.UseVisualStyleBackColor = true;
             this.btnImg.Click += new System.EventHandler(this.btnImg_Click);
             // 
@@ -541,7 +541,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "champViewer";
-            this.Text = "Upload Champion";
+            this.Text = "View & Edit Champion";
             this.Load += new System.EventHandler(this.champViewer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChampionImage)).EndInit();
             this.ResumeLayout(false);

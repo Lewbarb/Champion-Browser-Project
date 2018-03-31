@@ -15,6 +15,7 @@ namespace ChampionBrowser
         public Colour_info_box()
         {
             InitializeComponent();
+            BackColor = Color.FromName(global.BackColor);
         }
 
         private void okButton_Click(object sender, EventArgs e)

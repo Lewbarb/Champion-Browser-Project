@@ -58,7 +58,7 @@
             // 
             // btnOpen
             // 
-            this.btnOpen.Location = new System.Drawing.Point(177, 54);
+            this.btnOpen.Location = new System.Drawing.Point(181, 54);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(85, 23);
             this.btnOpen.TabIndex = 4;
@@ -68,7 +68,7 @@
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(178, 28);
+            this.textBoxSearch.Location = new System.Drawing.Point(181, 28);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(85, 20);
             this.textBoxSearch.TabIndex = 5;
@@ -78,7 +78,7 @@
             // 
             this.lblSearch.AutoSize = true;
             this.lblSearch.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblSearch.Location = new System.Drawing.Point(178, 12);
+            this.lblSearch.Location = new System.Drawing.Point(181, 12);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(41, 13);
             this.lblSearch.TabIndex = 6;
@@ -98,8 +98,10 @@
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Champions";
-            this.Text = "Browser Champions";
+            this.Text = "Browse Champions";
             this.Load += new System.EventHandler(this.Champions_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);

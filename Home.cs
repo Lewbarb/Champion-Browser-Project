@@ -14,7 +14,6 @@ namespace ChampionBrowser
     {
         public homeForm()
         {
-            //this.BackColor = Color.Red;
             InitializeComponent();
             this.BackColor = Color.FromName(global.BackColor);
         }

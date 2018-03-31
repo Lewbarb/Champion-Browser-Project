@@ -15,12 +15,13 @@ namespace ChampionBrowser
         public uploadWindow()
         {
             InitializeComponent();
-            if (textBoxName.Text != "Name")
+            BackColor = Color.FromName(global.BackColor);
+            /*if (textBoxName.Text != "Name")
             {
                 updatedb.searchDB(textBoxName.Text);
-            }
+            }*/
         }
-        public string text_Name { get; set; }
+        //public string text_Name { get; set; }
         public string label_Name_Text
         {
             get
@@ -32,10 +33,7 @@ namespace ChampionBrowser
                 this.label_Name_Text = value;
             }
         }
-        private void lblPassive_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {

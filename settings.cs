@@ -14,8 +14,8 @@ namespace ChampionBrowser
     {
         public settings()
         {
-            BackColor = Color.FromName(global.BackColor);
             InitializeComponent();
+            BackColor = Color.FromName(global.BackColor);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -23,11 +23,9 @@ namespace ChampionBrowser
             try
             {
                 global.BackColor = textBoxColour.Text;
-                
                 this.BackColor = Color.FromName(global.BackColor);
             }
             catch { }
-            //Champions.DefaultBackColor = Color.FromName(global.BackColor);
         }
 
         private void textBoxColour_TextChanged(object sender, EventArgs e)

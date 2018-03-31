@@ -53,8 +53,9 @@
             // 
             this.buttonChamps.BackColor = System.Drawing.Color.Gray;
             this.buttonChamps.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonChamps.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonChamps.ForeColor = System.Drawing.Color.White;
-            this.buttonChamps.Location = new System.Drawing.Point(36, 69);
+            this.buttonChamps.Location = new System.Drawing.Point(25, 101);
             this.buttonChamps.Name = "buttonChamps";
             this.buttonChamps.Size = new System.Drawing.Size(91, 23);
             this.buttonChamps.TabIndex = 1;
@@ -66,8 +67,9 @@
             // buttonSettings
             // 
             this.buttonSettings.BackColor = System.Drawing.Color.Gray;
+            this.buttonSettings.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonSettings.ForeColor = System.Drawing.Color.White;
-            this.buttonSettings.Location = new System.Drawing.Point(260, 69);
+            this.buttonSettings.Location = new System.Drawing.Point(289, 101);
             this.buttonSettings.Name = "buttonSettings";
             this.buttonSettings.Size = new System.Drawing.Size(99, 23);
             this.buttonSettings.TabIndex = 2;
@@ -78,6 +80,7 @@
             // buttonDark
             // 
             this.buttonDark.BackColor = System.Drawing.Color.Gray;
+            this.buttonDark.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.buttonDark.ForeColor = System.Drawing.Color.White;
             this.buttonDark.Location = new System.Drawing.Point(0, 0);
             this.buttonDark.Name = "buttonDark";
@@ -90,8 +93,10 @@
             // btnUpload
             // 
             this.btnUpload.BackColor = System.Drawing.Color.Gray;
+            this.btnUpload.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnUpload.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnUpload.ForeColor = System.Drawing.Color.White;
-            this.btnUpload.Location = new System.Drawing.Point(157, 69);
+            this.btnUpload.Location = new System.Drawing.Point(164, 101);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(75, 23);
             this.btnUpload.TabIndex = 6;
@@ -105,7 +110,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(147)))), ((int)(((byte)(147)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(413, 269);
+            this.ClientSize = new System.Drawing.Size(413, 234);
             this.Controls.Add(this.btnUpload);
             this.Controls.Add(this.buttonDark);
             this.Controls.Add(this.buttonSettings);
@@ -113,6 +118,8 @@
             this.Controls.Add(this.labeExamle1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "homeForm";
             this.Text = "Champion Browser";
             this.Load += new System.EventHandler(this.homeForm_Load);

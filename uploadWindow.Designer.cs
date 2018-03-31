@@ -161,17 +161,17 @@
             // 
             // btnImg
             // 
-            this.btnImg.Location = new System.Drawing.Point(23, 462);
+            this.btnImg.Location = new System.Drawing.Point(133, 435);
             this.btnImg.Name = "btnImg";
             this.btnImg.Size = new System.Drawing.Size(75, 23);
             this.btnImg.TabIndex = 13;
-            this.btnImg.Text = "Check";
+            this.btnImg.Text = "Check URL";
             this.btnImg.UseVisualStyleBackColor = true;
             this.btnImg.Click += new System.EventHandler(this.btnImg_Click);
             // 
             // btnUpload
             // 
-            this.btnUpload.Location = new System.Drawing.Point(132, 462);
+            this.btnUpload.Location = new System.Drawing.Point(133, 461);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(75, 23);
             this.btnUpload.TabIndex = 15;
@@ -264,7 +264,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(132, 433);
+            this.btnEdit.Location = new System.Drawing.Point(229, 462);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 27;
@@ -327,7 +327,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "uploadWindow";
-            this.Text = "SearchWindow";
+            this.Text = "Upload";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChampionImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

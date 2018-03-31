@@ -15,6 +15,9 @@ namespace ChampionBrowser
         public Upload_Info_Box()
         {
             InitializeComponent();
+            {
+             BackColor = Color.FromName(global.BackColor);
+            }
         }
     }
 }
