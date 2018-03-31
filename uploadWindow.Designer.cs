@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uploadWindow));
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.textBoxHP = new System.Windows.Forms.TextBox();
             this.textBoxHPRegen = new System.Windows.Forms.TextBox();
@@ -324,6 +325,7 @@
             this.Controls.Add(this.textBoxHP);
             this.Controls.Add(this.textBoxName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "uploadWindow";
             this.Text = "SearchWindow";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChampionImage)).EndInit();

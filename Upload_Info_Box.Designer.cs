@@ -65,8 +65,9 @@
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.textBoxDescription);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Upload_Info_Box";
-            this.Text = "Upload_Info_Box";
+            this.Text = "Info";
             this.ResumeLayout(false);
             this.PerformLayout();
 
