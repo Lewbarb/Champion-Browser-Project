@@ -39,7 +39,6 @@
             this.textBoxBasearmour = new System.Windows.Forms.TextBox();
             this.textBoxBaseMR = new System.Windows.Forms.TextBox();
             this.textBoxIMGURL = new System.Windows.Forms.TextBox();
-            this.pictureBoxChampionImage = new System.Windows.Forms.PictureBox();
             this.btnImg = new System.Windows.Forms.Button();
             this.btnUpload = new System.Windows.Forms.Button();
             this.textBoxBaseSpeed = new System.Windows.Forms.TextBox();
@@ -52,6 +51,8 @@
             this.textBoxR = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
+            this.btnInfo = new System.Windows.Forms.Button();
+            this.pictureBoxChampionImage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChampionImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -156,16 +157,6 @@
             this.textBoxIMGURL.TabIndex = 11;
             this.textBoxIMGURL.Text = "Image URL";
             this.textBoxIMGURL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // pictureBoxChampionImage
-            // 
-            this.pictureBoxChampionImage.Location = new System.Drawing.Point(12, 12);
-            this.pictureBoxChampionImage.Name = "pictureBoxChampionImage";
-            this.pictureBoxChampionImage.Size = new System.Drawing.Size(316, 158);
-            this.pictureBoxChampionImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxChampionImage.TabIndex = 12;
-            this.pictureBoxChampionImage.TabStop = false;
-            this.pictureBoxChampionImage.Click += new System.EventHandler(this.pictureBoxChampionImage_Click);
             // 
             // btnImg
             // 
@@ -280,12 +271,34 @@
             this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
+            // btnInfo
+            // 
+            this.btnInfo.BackgroundImage = global::ChampionBrowser.Properties.Resources.info;
+            this.btnInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnInfo.Location = new System.Drawing.Point(298, 176);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(30, 30);
+            this.btnInfo.TabIndex = 28;
+            this.btnInfo.UseVisualStyleBackColor = true;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
+            // 
+            // pictureBoxChampionImage
+            // 
+            this.pictureBoxChampionImage.Location = new System.Drawing.Point(12, 12);
+            this.pictureBoxChampionImage.Name = "pictureBoxChampionImage";
+            this.pictureBoxChampionImage.Size = new System.Drawing.Size(316, 158);
+            this.pictureBoxChampionImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxChampionImage.TabIndex = 12;
+            this.pictureBoxChampionImage.TabStop = false;
+            this.pictureBoxChampionImage.Click += new System.EventHandler(this.pictureBoxChampionImage_Click);
+            // 
             // uploadWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(340, 497);
+            this.Controls.Add(this.btnInfo);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.textBoxR);
@@ -346,30 +359,31 @@
         private System.Windows.Forms.TextBox textBoxR;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnInfo;
         /*public System.Windows.Forms.TextBox textBoxHP { get; set; }
-        public System.Windows.Forms.TextBox textBoxHPRegen { get; set; }
-        public System.Windows.Forms.TextBox textBoxMana { get; set; }
-        public System.Windows.Forms.TextBox textBoxManaRegen { get; set; }
-        public System.Windows.Forms.TextBox textBoxRange { get; set; }
-        public System.Windows.Forms.TextBox textBoxBaseAD { get; set; }
-        public System.Windows.Forms.TextBox textBoxBaseattackspeed { get; set; }
-        public System.Windows.Forms.TextBox textBoxBasearmour { get; set; }
-        public System.Windows.Forms.TextBox textBoxBaseMR { get; set; }
-        public System.Windows.Forms.TextBox textBoxIMGURL { get; set; }
-        public System.Windows.Forms.PictureBox pictureBoxChampionImage { get; set; }
-        public System.Windows.Forms.Button btnImg { get; set; }
-        public System.Windows.Forms.Button btnTest { get; set; }
-        public System.Windows.Forms.Button btnUpload { get; set; }
-        public System.Windows.Forms.TextBox textBoxBaseSpeed { get; set; }
-        public System.Windows.Forms.TextBox textBoxBluePrice { get; set; }
-        public System.Windows.Forms.TextBox textBoxRPCost { get; set; }
-        public System.Windows.Forms.TextBox textBoxPassive { get; set; }
-        public System.Windows.Forms.TextBox textBoxQ { get; set; }
-        public System.Windows.Forms.TextBox textBoxW { get; set; }
-        public System.Windows.Forms.TextBox textBoxE { get; set; }
-        public System.Windows.Forms.TextBox textBoxR { get; set; }
-        public System.Windows.Forms.Button btnDelete { get; set; }
-        public System.Windows.Forms.Button btnSearch { get; set; }
-        public System.Windows.Forms.Button btnEdit { get; set; }*/
+public System.Windows.Forms.TextBox textBoxHPRegen { get; set; }
+public System.Windows.Forms.TextBox textBoxMana { get; set; }
+public System.Windows.Forms.TextBox textBoxManaRegen { get; set; }
+public System.Windows.Forms.TextBox textBoxRange { get; set; }
+public System.Windows.Forms.TextBox textBoxBaseAD { get; set; }
+public System.Windows.Forms.TextBox textBoxBaseattackspeed { get; set; }
+public System.Windows.Forms.TextBox textBoxBasearmour { get; set; }
+public System.Windows.Forms.TextBox textBoxBaseMR { get; set; }
+public System.Windows.Forms.TextBox textBoxIMGURL { get; set; }
+public System.Windows.Forms.PictureBox pictureBoxChampionImage { get; set; }
+public System.Windows.Forms.Button btnImg { get; set; }
+public System.Windows.Forms.Button btnTest { get; set; }
+public System.Windows.Forms.Button btnUpload { get; set; }
+public System.Windows.Forms.TextBox textBoxBaseSpeed { get; set; }
+public System.Windows.Forms.TextBox textBoxBluePrice { get; set; }
+public System.Windows.Forms.TextBox textBoxRPCost { get; set; }
+public System.Windows.Forms.TextBox textBoxPassive { get; set; }
+public System.Windows.Forms.TextBox textBoxQ { get; set; }
+public System.Windows.Forms.TextBox textBoxW { get; set; }
+public System.Windows.Forms.TextBox textBoxE { get; set; }
+public System.Windows.Forms.TextBox textBoxR { get; set; }
+public System.Windows.Forms.Button btnDelete { get; set; }
+public System.Windows.Forms.Button btnSearch { get; set; }
+public System.Windows.Forms.Button btnEdit { get; set; }*/
     }
 }

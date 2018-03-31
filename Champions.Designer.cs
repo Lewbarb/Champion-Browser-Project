@@ -57,7 +57,7 @@
             // 
             // btnOpen
             // 
-            this.btnOpen.Location = new System.Drawing.Point(181, 12);
+            this.btnOpen.Location = new System.Drawing.Point(177, 54);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(85, 23);
             this.btnOpen.TabIndex = 4;
@@ -67,7 +67,7 @@
             // 
             // textBoxSearch
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(181, 67);
+            this.textBoxSearch.Location = new System.Drawing.Point(178, 28);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(85, 20);
             this.textBoxSearch.TabIndex = 5;
@@ -77,7 +77,7 @@
             // 
             this.lblSearch.AutoSize = true;
             this.lblSearch.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblSearch.Location = new System.Drawing.Point(181, 51);
+            this.lblSearch.Location = new System.Drawing.Point(178, 12);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(41, 13);
             this.lblSearch.TabIndex = 6;

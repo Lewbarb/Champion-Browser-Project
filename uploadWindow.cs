@@ -193,5 +193,11 @@ namespace ChampionBrowser
         {
 
         }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            Upload_Info_Box upload = new Upload_Info_Box();
+            upload.ShowDialog();
+        }
     }
 }
