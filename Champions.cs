@@ -20,7 +20,7 @@ namespace ChampionBrowser
             BackColor = Color.FromName(global.BackColor);
             fill_listbox();
         }
-        void fill_listbox()
+            void fill_listbox()
         {
             var myChampionList = updatedb.championList().OrderBy(o => o.name);//creates alphabetical list of every champion in database
             //listBoxChampionNames.DataSource = myChampionList.ToString();
@@ -76,9 +76,22 @@ namespace ChampionBrowser
 
         private void btnOpen_Click(object sender, EventArgs e)
         {
-            string myName = listBoxChampionNames.SelectedItem.ToString();
-            champViewer test = new champViewer(myName);
-            test.Show();
+            try
+            {
+                string myName = null;
+                myName = listBoxChampionNames.SelectedItem.ToString();
+                if (!string.IsNullOrEmpty(myName))
+                {
+                    champViewer test = new champViewer(myName);
+                    test.Show();
+                }
+            }
+            catch(System.NullReferenceException)
+            {
+                Empty_warning error = new Empty_warning();
+                error.ShowDialog();
+            }
+
         }
 
         private void btnEdit_Click(object sender, EventArgs e)

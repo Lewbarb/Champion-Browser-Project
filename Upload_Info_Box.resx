@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="textBoxDescription.Text" xml:space="preserve">
-    <value>In this window you add the stats for the champion are you going to add to the database.
+    <value>In this window you add the stats for the champion are you going to edit/add to the database.
 The name must be no more than 20 characters long.
 The passive, Q, W, E, R must be no more than 50 characters long.
 You cannot have any decimal values, except for the attack speed property.

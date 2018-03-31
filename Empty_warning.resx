@@ -117,14 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="textBoxDescription.Text" xml:space="preserve">
-    <value>In this box, you can set the background colour of each window (excluding the home page) that you open.
-Note that this colour is only applied to new windows opened. If you have any windows open, please close them and reopen to see the newly applied colour.
-
-If the colour you selected is a valid colour, you will see this reflected in this window by the change in background colour.
-
-Please be aware that this is case sensetive; for example you can use 'Black' but not 'black'.</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

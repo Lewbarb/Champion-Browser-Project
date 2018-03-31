@@ -25,7 +25,7 @@ namespace ChampionBrowser
                 global.BackColor = textBoxColour.Text;
                 this.BackColor = Color.FromName(global.BackColor);
             }
-            catch { }
+            catch(System.ArgumentException) { }
         }
 
         private void textBoxColour_TextChanged(object sender, EventArgs e)

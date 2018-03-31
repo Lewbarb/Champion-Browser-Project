@@ -188,5 +188,12 @@ namespace ChampionBrowser
             Upload_Info_Box infobox = new Upload_Info_Box();
             infobox.ShowDialog();
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            string name = textBoxName.Text;
+            updatedb.deleteRecord(name);
+            this.Close();
+        }
     }
 }

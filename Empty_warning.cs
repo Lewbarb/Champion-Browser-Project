@@ -10,24 +10,21 @@ using System.Windows.Forms;
 
 namespace ChampionBrowser
 {
-    public partial class Upload_Info_Box : Form
+    public partial class Empty_warning : Form
     {
-        public Upload_Info_Box()
+        public Empty_warning()
         {
             InitializeComponent();
-            {
-             BackColor = Color.FromName(global.BackColor);
-            }
-        }
-
-        private void okButton_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void textBoxDescription_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void okButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -49,21 +49,27 @@
             // 
             // listBoxChampionNames
             // 
+            this.listBoxChampionNames.BackColor = System.Drawing.Color.DarkGray;
+            this.listBoxChampionNames.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxChampionNames.ForeColor = System.Drawing.Color.White;
             this.listBoxChampionNames.FormattingEnabled = true;
+            this.listBoxChampionNames.ItemHeight = 16;
             this.listBoxChampionNames.Location = new System.Drawing.Point(12, 12);
             this.listBoxChampionNames.Name = "listBoxChampionNames";
-            this.listBoxChampionNames.Size = new System.Drawing.Size(163, 264);
+            this.listBoxChampionNames.Size = new System.Drawing.Size(163, 260);
             this.listBoxChampionNames.TabIndex = 2;
             this.listBoxChampionNames.SelectedIndexChanged += new System.EventHandler(this.listBoxChampionNames_SelectedIndexChanged);
             // 
             // btnOpen
             // 
+            this.btnOpen.BackColor = System.Drawing.Color.Gray;
+            this.btnOpen.ForeColor = System.Drawing.Color.White;
             this.btnOpen.Location = new System.Drawing.Point(181, 54);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(85, 23);
             this.btnOpen.TabIndex = 4;
             this.btnOpen.Text = "View and Edit";
-            this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.UseVisualStyleBackColor = false;
             this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
             // textBoxSearch
@@ -77,7 +83,8 @@
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblSearch.BackColor = System.Drawing.Color.Gray;
+            this.lblSearch.ForeColor = System.Drawing.Color.White;
             this.lblSearch.Location = new System.Drawing.Point(181, 12);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(41, 13);

@@ -71,6 +71,7 @@
             this.lblSpeed = new System.Windows.Forms.Label();
             this.pictureBoxChampionImage = new System.Windows.Forms.PictureBox();
             this.btnInfo = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxChampionImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -490,12 +491,24 @@
             this.btnInfo.UseVisualStyleBackColor = true;
             this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(323, 564);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 48;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Visible = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // champViewer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(403, 591);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnInfo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -594,6 +607,7 @@
         private System.Windows.Forms.Label lblBluePrice;
         private System.Windows.Forms.Label lblSpeed;
         private System.Windows.Forms.Button btnInfo;
+        private System.Windows.Forms.Button btnDelete;
         /*public System.Windows.Forms.TextBox textBoxName { get; set; }
 public System.Windows.Forms.TextBox textBoxHP { get; set; }
 public System.Windows.Forms.TextBox textBoxHPRegen { get; set; }

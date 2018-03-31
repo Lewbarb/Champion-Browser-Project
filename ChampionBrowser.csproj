@@ -93,6 +93,12 @@
     <Compile Include="Colour_info_box.Designer.cs">
       <DependentUpon>Colour_info_box.cs</DependentUpon>
     </Compile>
+    <Compile Include="Empty_warning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empty_warning.Designer.cs">
+      <DependentUpon>Empty_warning.cs</DependentUpon>
+    </Compile>
     <Compile Include="global.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Colour_info_box.resx">
       <DependentUpon>Colour_info_box.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empty_warning.resx">
+      <DependentUpon>Empty_warning.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

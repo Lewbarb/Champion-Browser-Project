@@ -36,31 +36,35 @@
             // 
             // buttonDark
             // 
-            this.buttonDark.Location = new System.Drawing.Point(85, 63);
+            this.buttonDark.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.buttonDark.ForeColor = System.Drawing.Color.White;
+            this.buttonDark.Location = new System.Drawing.Point(54, 48);
             this.buttonDark.Name = "buttonDark";
-            this.buttonDark.Size = new System.Drawing.Size(78, 28);
+            this.buttonDark.Size = new System.Drawing.Size(147, 25);
             this.buttonDark.TabIndex = 0;
-            this.buttonDark.Text = "Set Colour";
-            this.buttonDark.UseVisualStyleBackColor = true;
+            this.buttonDark.Text = "Set Background Colour";
+            this.buttonDark.UseVisualStyleBackColor = false;
             this.buttonDark.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBoxColour
             // 
-            this.textBoxColour.Location = new System.Drawing.Point(74, 37);
+            this.textBoxColour.Location = new System.Drawing.Point(54, 22);
             this.textBoxColour.Name = "textBoxColour";
-            this.textBoxColour.Size = new System.Drawing.Size(100, 20);
+            this.textBoxColour.Size = new System.Drawing.Size(147, 20);
             this.textBoxColour.TabIndex = 1;
             this.textBoxColour.TextChanged += new System.EventHandler(this.textBoxColour_TextChanged);
             // 
             // btnInfo
             // 
+            this.btnInfo.BackColor = System.Drawing.Color.Transparent;
             this.btnInfo.BackgroundImage = global::ChampionBrowser.Properties.Resources.info;
             this.btnInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnInfo.ForeColor = System.Drawing.Color.Transparent;
             this.btnInfo.Location = new System.Drawing.Point(219, 12);
             this.btnInfo.Name = "btnInfo";
             this.btnInfo.Size = new System.Drawing.Size(30, 30);
             this.btnInfo.TabIndex = 29;
-            this.btnInfo.UseVisualStyleBackColor = true;
+            this.btnInfo.UseVisualStyleBackColor = false;
             this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
             // 
             // settings
@@ -68,7 +72,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(261, 139);
+            this.ClientSize = new System.Drawing.Size(261, 106);
             this.Controls.Add(this.btnInfo);
             this.Controls.Add(this.textBoxColour);
             this.Controls.Add(this.buttonDark);
