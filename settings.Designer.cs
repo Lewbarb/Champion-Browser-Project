@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(settings));
             this.buttonDark = new System.Windows.Forms.Button();
             this.textBoxColour = new System.Windows.Forms.TextBox();
+            this.btnInfo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // buttonDark
             // 
-            this.buttonDark.Location = new System.Drawing.Point(12, 39);
+            this.buttonDark.Location = new System.Drawing.Point(85, 63);
             this.buttonDark.Name = "buttonDark";
             this.buttonDark.Size = new System.Drawing.Size(78, 28);
             this.buttonDark.TabIndex = 0;
@@ -44,21 +46,36 @@
             // 
             // textBoxColour
             // 
-            this.textBoxColour.Location = new System.Drawing.Point(97, 131);
+            this.textBoxColour.Location = new System.Drawing.Point(74, 37);
             this.textBoxColour.Name = "textBoxColour";
             this.textBoxColour.Size = new System.Drawing.Size(100, 20);
             this.textBoxColour.TabIndex = 1;
             this.textBoxColour.TextChanged += new System.EventHandler(this.textBoxColour_TextChanged);
             // 
+            // btnInfo
+            // 
+            this.btnInfo.BackgroundImage = global::ChampionBrowser.Properties.Resources.info;
+            this.btnInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnInfo.Location = new System.Drawing.Point(219, 12);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(30, 30);
+            this.btnInfo.TabIndex = 29;
+            this.btnInfo.UseVisualStyleBackColor = true;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
+            // 
             // settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.BackColor = System.Drawing.Color.Gray;
+            this.ClientSize = new System.Drawing.Size(261, 139);
+            this.Controls.Add(this.btnInfo);
             this.Controls.Add(this.textBoxColour);
             this.Controls.Add(this.buttonDark);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "settings";
-            this.Text = "settings";
+            this.Text = "Colour Picker";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -68,5 +85,6 @@
 
         private System.Windows.Forms.Button buttonDark;
         private System.Windows.Forms.TextBox textBoxColour;
+        private System.Windows.Forms.Button btnInfo;
     }
 }

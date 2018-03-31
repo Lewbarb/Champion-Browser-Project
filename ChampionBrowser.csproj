@@ -87,6 +87,12 @@
       <DependentUpon>champViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="cloudChampionsModel.cs" />
+    <Compile Include="Colour_info_box.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Colour_info_box.Designer.cs">
+      <DependentUpon>Colour_info_box.cs</DependentUpon>
+    </Compile>
     <Compile Include="global.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="champViewer.resx">
       <DependentUpon>champViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Colour_info_box.resx">
+      <DependentUpon>Colour_info_box.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

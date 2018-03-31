@@ -23,15 +23,22 @@ namespace ChampionBrowser
             try
             {
                 global.BackColor = textBoxColour.Text;
+                
+                this.BackColor = Color.FromName(global.BackColor);
             }
             catch { }
-            this.BackColor = Color.FromName(global.BackColor);
             //Champions.DefaultBackColor = Color.FromName(global.BackColor);
         }
 
         private void textBoxColour_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            Colour_info_box colourInfo = new Colour_info_box();
+            colourInfo.ShowDialog();
         }
     }
 }
