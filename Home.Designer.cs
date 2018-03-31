@@ -88,6 +88,7 @@
             this.buttonDark.TabIndex = 3;
             this.buttonDark.Text = "Dark";
             this.buttonDark.UseVisualStyleBackColor = false;
+            this.buttonDark.Visible = false;
             this.buttonDark.Click += new System.EventHandler(this.buttonDark_Click);
             // 
             // btnUpload

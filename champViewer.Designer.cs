@@ -365,7 +365,7 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(171, 254);
+            this.lblTitle.Location = new System.Drawing.Point(162, 254);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(87, 13);
             this.lblTitle.TabIndex = 37;

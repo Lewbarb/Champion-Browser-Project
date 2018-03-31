@@ -16,7 +16,7 @@ namespace ChampionBrowser
         {
             InitializeComponent();
             BackColor = Color.FromName(global.BackColor);
-            /*if (textBoxName.Text != "Name")
+            /*if (textBoxName.Text != "Name")//for testing purposes
             {
                 updatedb.searchDB(textBoxName.Text);
             }*/
@@ -47,7 +47,11 @@ namespace ChampionBrowser
 
         private void btnImg_Click(object sender, EventArgs e)
         {
-            pictureBoxChampionImage.Load(textBoxIMGURL.Text);
+            try
+            {
+                pictureBoxChampionImage.Load(textBoxIMGURL.Text);
+            }
+            catch { }
         }
 
         private void btnTest_Click(object sender, EventArgs e)
@@ -90,18 +94,15 @@ namespace ChampionBrowser
                  updatedb.pushDB(name, hp, hpregen, mana, manaregen, range, ad, attackspeed, armour, mr, speed, bluePrice, rpPrice, Q, W, E, R, passive, imageLink);
                 this.Close();   
             }catch { }
-            //string name = textBoxName.Text;
-            //champion result = updatedb.searchDB(name);
-            //add an if check for string length
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void btnDelete_Click(object sender, EventArgs e)//deletes record from database
         {
             string name = textBoxName.Text;
             updatedb.deleteRecord(name);
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void btnSearch_Click(object sender, EventArgs e)//for testing purposes
         {
             string name = textBoxName.Text;
             var champ = updatedb.searchDB(name);
@@ -131,7 +132,7 @@ namespace ChampionBrowser
             textBoxR.Text = champ.R.TrimEnd();
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e)//pushes changes to the database
         {
             try
             {
@@ -192,7 +193,7 @@ namespace ChampionBrowser
 
         }
 
-        private void btnInfo_Click(object sender, EventArgs e)
+        private void btnInfo_Click(object sender, EventArgs e)//shows information dialgoue box
         {
             Upload_Info_Box upload = new Upload_Info_Box();
             upload.ShowDialog();

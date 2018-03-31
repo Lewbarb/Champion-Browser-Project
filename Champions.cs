@@ -89,6 +89,7 @@ namespace ChampionBrowser
             catch(System.NullReferenceException)
             {
                 Empty_warning error = new Empty_warning();
+                System.Media.SystemSounds.Hand.Play();
                 error.ShowDialog();
             }
 
