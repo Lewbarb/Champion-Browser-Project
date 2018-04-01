@@ -198,5 +198,10 @@ namespace ChampionBrowser
             Upload_Info_Box upload = new Upload_Info_Box();
             upload.ShowDialog();
         }
+
+        private void textBoxQ_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

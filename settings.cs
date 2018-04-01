@@ -23,7 +23,7 @@ namespace ChampionBrowser
             try
             {
                 global.BackColor = textBoxColour.Text;
-                this.BackColor = Color.FromName(global.BackColor);
+                BackColor = Color.FromName(global.BackColor);
             }
             catch(System.ArgumentException) { }
         }

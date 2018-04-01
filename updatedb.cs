@@ -15,7 +15,8 @@ namespace ChampionBrowser
                 tblChampionMetaData champion = new tblChampionMetaData
                 {
                     //name = "Xayah", basead=64, passive="Clean Cuts"
-                    //name = name, basehp = hp, hpregen = hpregen, basemana = mana, basemanaregen=manaregen, range = range, basead = ad, baseattackspeed = attackspeed, basearmour = armour, basemr = mr, basespeed = speed, bluePrice = bluePrice, rpPrice = rpPrice, Q = Q, W = W, E = E, R = R, passive = passive, imageLink = imageLink
+                    //name = name, basehp = hp, hpregen = hpregen, basemana = mana, basemanaregen=manaregen, range = range, basead = ad, 
+                    //baseattackspeed = attackspeed, basearmour = armour, basemr = mr, basespeed = speed, bluePrice = bluePrice, rpPrice = rpPrice, Q = Q, W = W, E = E, R = R, passive = passive, imageLink = imageLink
                     name = name.Trim(),
                     basehp = hp,
                     hpregen = hpregen,
@@ -39,16 +40,14 @@ namespace ChampionBrowser
                 try
                 {
                     context.tblChampionMetaDatas.Add(champion);
-                    //context.tblTests.Add(champion);
                 }
                 catch { }
                 context.SaveChanges();
-                //context.SaveChangesAsync();
             }
         }
 
 
-        public static void editRecord(string name, int hp, int hpregen, int mana, int manaregen, int range, int ad, float attackspeed, int armour, int mr, int speed, int bluePrice, int rpPrice, string Q, string W, string E, string R, string passive, string imageLink)
+        public static void editRecord(string name, int hp, int hpregen, int mana, int manaregen, int range, int ad, float attackspeed, int armour, int mr, int speed, int bluePrice, int rpPrice, string Q, string W, string E,  string R, string passive, string imageLink)
         {
             using (localdbChampionModel db = new localdbChampionModel())
             {
@@ -79,9 +78,9 @@ namespace ChampionBrowser
                 var original = db.tblChampionMetaDatas.Find(champion.name);
                 if (original != null)
                 {
-                    db.Entry(original).CurrentValues.SetValues(champion);
-                    var test = champion.passive;
-                    db.SaveChanges();
+                db.Entry(original).CurrentValues.SetValues(champion);
+                var test = champion.passive;
+                db.SaveChanges();
                 }
             }
         }
@@ -93,9 +92,9 @@ namespace ChampionBrowser
             {
                 tblChampionMetaData champion = new tblChampionMetaData{name = passed_name};
                 var champtest = updatedb.searchDB(passed_name);
-                    context.tblChampionMetaDatas.Attach(champtest);
-                    context.tblChampionMetaDatas.Remove(champtest);
-                    context.SaveChanges();
+                context.tblChampionMetaDatas.Attach(champtest);
+                context.tblChampionMetaDatas.Remove(champtest);
+                context.SaveChanges();
             }
         }
         

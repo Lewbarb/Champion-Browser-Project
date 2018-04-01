@@ -224,6 +224,7 @@
             this.textBoxQ.TabIndex = 21;
             this.textBoxQ.Text = "Q";
             this.textBoxQ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBoxQ.TextChanged += new System.EventHandler(this.textBoxQ_TextChanged);
             // 
             // textBoxW
             // 

@@ -63,6 +63,7 @@
             this.textBoxDescription.TabIndex = 26;
             this.textBoxDescription.TabStop = false;
             this.textBoxDescription.Text = resources.GetString("textBoxDescription.Text");
+            this.textBoxDescription.TextChanged += new System.EventHandler(this.textBoxDescription_TextChanged);
             // 
             // Colour_info_box
             // 

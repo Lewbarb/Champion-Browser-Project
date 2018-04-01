@@ -91,8 +91,8 @@ namespace ChampionBrowser
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 string name = textBoxName.Text.TrimEnd();
                 int hp = Int32.Parse(textBoxHP.Text);
                 int hpregen = Int32.Parse(textBoxHPRegen.Text);
@@ -138,8 +138,8 @@ namespace ChampionBrowser
                         R, 
                         passive, 
                         imageLink);
-            }
-            catch { }
+            //}
+            //catch { }
         }
 
         private void textBoxName_TextChanged(object sender, EventArgs e)
