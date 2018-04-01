@@ -13,7 +13,7 @@ namespace ChampionBrowser
     public partial class Champions : Form
     {
 
-        public static string text_Name { get; set; }
+        //public static string text_Name { get; set; }
         public Champions()
         {
             InitializeComponent();
@@ -21,14 +21,13 @@ namespace ChampionBrowser
             fill_listbox();
         }
             void fill_listbox()
-        {
-            var myChampionList = updatedb.championList().OrderBy(o => o.name);//creates alphabetical list of every champion in database
-            //listBoxChampionNames.DataSource = myChampionList.ToString();
-            foreach (tblChampionMetaData c in myChampionList)
             {
-                listBoxChampionNames.Items.Add(c.name.Trim());
+                var myChampionList = updatedb.championList().OrderBy(o => o.name);//creates alphabetical list of every champion in database
+                foreach (tblChampionMetaData c in myChampionList)
+                {
+                    listBoxChampionNames.Items.Add(c.name.Trim());
+                }
             }
-        }
         void filter_listbox(string searchName)
         {
             listBoxChampionNames.Items.Clear();

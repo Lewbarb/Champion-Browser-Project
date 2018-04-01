@@ -72,21 +72,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Champion.cs" />
     <Compile Include="Champions.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Champions.Designer.cs">
       <DependentUpon>Champions.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChampionsModel.cs" />
     <Compile Include="champViewer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="champViewer.Designer.cs">
       <DependentUpon>champViewer.cs</DependentUpon>
     </Compile>
-    <Compile Include="cloudChampionsModel.cs" />
     <Compile Include="Colour_info_box.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,7 +119,6 @@
     <Compile Include="settings.Designer.cs">
       <DependentUpon>settings.cs</DependentUpon>
     </Compile>
-    <Compile Include="tblTest.cs" />
     <Compile Include="updatedb.cs" />
     <Compile Include="Upload_Info_Box.cs">
       <SubType>Form</SubType>
