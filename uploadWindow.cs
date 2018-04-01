@@ -16,13 +16,8 @@ namespace ChampionBrowser
         {
             InitializeComponent();
             BackColor = Color.FromName(global.BackColor);
-            /*if (textBoxName.Text != "Name")//for testing purposes
-            {
-                updatedb.searchDB(textBoxName.Text);
-            }*/
         }
-        //public string text_Name { get; set; }
-        public string label_Name_Text
+        /*public string label_Name_Text//test purposes
         {
             get
             {
@@ -32,8 +27,7 @@ namespace ChampionBrowser
             {
                 this.label_Name_Text = value;
             }
-        }
-
+        }*/
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -102,7 +96,7 @@ namespace ChampionBrowser
             updatedb.deleteRecord(name);
         }
 
-        private void btnSearch_Click(object sender, EventArgs e)//for testing purposes
+        /*private void btnSearch_Click(object sender, EventArgs e)//for testing purposes
         {
             string name = textBoxName.Text;
             var champ = updatedb.searchDB(name);
@@ -130,7 +124,7 @@ namespace ChampionBrowser
             textBoxW.Text = champ.W.TrimEnd();
             textBoxE.Text = champ.E.TrimEnd();
             textBoxR.Text = champ.R.TrimEnd();
-        }
+        }*/
 
         private void btnEdit_Click(object sender, EventArgs e)//pushes changes to the database
         {
