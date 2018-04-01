@@ -48,7 +48,6 @@ namespace ChampionBrowser
             
             homeForm newHome = new homeForm();
             newHome.Show();
-            //this.Hide();
             this.Close();
         }
 
@@ -83,9 +82,10 @@ namespace ChampionBrowser
                 {
                     champViewer test = new champViewer(myName);
                     test.Show();
+                    this.Close();
                 }
             }
-            catch(System.NullReferenceException)
+            catch(System.NullReferenceException)//catches exception if user hasn't selected an item from the list when clicking view & edit button
             {
                 Empty_warning error = new Empty_warning();
                 System.Media.SystemSounds.Hand.Play();

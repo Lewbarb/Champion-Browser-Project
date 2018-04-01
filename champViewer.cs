@@ -112,13 +112,32 @@ namespace ChampionBrowser
                 string E = textBoxE.Text.TrimEnd();
                 string R = textBoxR.Text.TrimEnd();
                 string imageLink = textBoxIMGURL.Text.TrimEnd();
-                if (passive.Length <= 25 &&
-                    Q.Length <= 25 &&
-                    W.Length <= 25 &&
-                    E.Length <= 25 &&
-                    R.Length <= 25 &&
-                    imageLink.Length <= 200)
-                    updatedb.editRecord(name, hp, hpregen, mana, manaregen, range, ad, attackspeed, armour, mr, speed, bluePrice, rpPrice, Q, W, E, R, passive, imageLink);
+                if (name.Length <= 20 && 
+                    passive.Length <= 50 &&
+                    Q.Length <= 50 &&
+                    W.Length <= 50 &&
+                    E.Length <= 50 &&
+                    R.Length <= 50 &&
+                    imageLink.Length <= 300)
+                    updatedb.editRecord(name, 
+                        hp, 
+                        hpregen, 
+                        mana, 
+                        manaregen, 
+                        range, 
+                        ad, 
+                        attackspeed, 
+                        armour, 
+                        mr, 
+                        speed, 
+                        bluePrice, 
+                        rpPrice, 
+                        Q, 
+                        W, 
+                        E, 
+                        R, 
+                        passive, 
+                        imageLink);
             }
             catch { }
         }
@@ -193,6 +212,8 @@ namespace ChampionBrowser
         {
             string name = textBoxName.Text;
             updatedb.deleteRecord(name);
+            info_delete delete_window = new info_delete();
+            delete_window.ShowDialog();
             this.Close();
         }
     }

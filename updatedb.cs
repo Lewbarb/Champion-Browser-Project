@@ -8,16 +8,12 @@ namespace ChampionBrowser
 {
     class updatedb//adds records to database
     {
-        //public static void pushDB(string inName, string inPassive, int inBasead)/
         public static void pushDB(string name, int hp, int hpregen, int mana, int manaregen, int range, int ad, float attackspeed, int armour, int mr, int speed, int bluePrice, int rpPrice, string Q, string W, string E, string R, string passive, string imageLink)
         {
-            //using (ChampionsModel context = new ChampionsModel())
             using (localdbChampionModel context = new localdbChampionModel())
             {
-                //tblTest champion = new tblTest
                 tblChampionMetaData champion = new tblChampionMetaData
                 {
-                    //name = inName, passive = inPassive, basead = inBasead
                     //name = "Xayah", basead=64, passive="Clean Cuts"
                     //name = name, basehp = hp, hpregen = hpregen, basemana = mana, basemanaregen=manaregen, range = range, basead = ad, baseattackspeed = attackspeed, basearmour = armour, basemr = mr, basespeed = speed, bluePrice = bluePrice, rpPrice = rpPrice, Q = Q, W = W, E = E, R = R, passive = passive, imageLink = imageLink
                     name = name.Trim(),
@@ -54,10 +50,8 @@ namespace ChampionBrowser
 
         public static void editRecord(string name, int hp, int hpregen, int mana, int manaregen, int range, int ad, float attackspeed, int armour, int mr, int speed, int bluePrice, int rpPrice, string Q, string W, string E, string R, string passive, string imageLink)
         {
-            //using (ChampionsModel context = new ChampionsModel())
             using (localdbChampionModel db = new localdbChampionModel())
             {
-                //tblTest champion = new tblTest
                 tblChampionMetaData champion = new tblChampionMetaData
                 {
                     //name = inName, passive = inPassive, basead = inBasead
@@ -89,53 +83,19 @@ namespace ChampionBrowser
                     var test = champion.passive;
                     db.SaveChanges();
                 }
-                
-                //db.champions.Attach(champion);
-                //db.SaveChanges();
-                //context.SaveChangesAsync();
             }
         }
 
 
-        public static void deleteRecord(string name)
+        public static void deleteRecord(string passed_name)
         {
-            //using (ChampionsModel context = new ChampionsModel())
             using (localdbChampionModel context = new localdbChampionModel())
             {
-                //tblTest champion = new tblTest
-                tblChampionMetaData champion = new tblChampionMetaData
-                {
-                    name = name,
-                };
-                try
-                {
-                    context.tblChampionMetaDatas.Attach(champion);
-                    context.tblChampionMetaDatas.Remove(champion);
-                    //context.tblTests.Add(champion);
-                }
-                catch { }
-                context.SaveChanges();
-                //context.SaveChangesAsync();
-            }
-        }
-
-        public static List<string> getDB(string searchName)//needs tested
-        {
-            //context.tblTests.Find("Jinx");
-            //List<String> champList = new List<String>();
-            //using (var db = new ChampionsModel())
-            using (var db = new localdbChampionModel())
-            {
-                var query = (//from c in db.tblTests
-                             from c in db.tblChampionMetaDatas
-                                 //where c.name == "Lissandra"
-                             where c.name == searchName
-                             select new { /*c.name,*/ c.passive, c.basead, c.imageLink });//test this pls
-                query.ToString();
-                var test = query.ToString();
-                List<String> result = new List<string>();
-                result.Add(test);
-                return result;
+                tblChampionMetaData champion = new tblChampionMetaData{name = passed_name};
+                var champtest = updatedb.searchDB(passed_name);
+                    context.tblChampionMetaDatas.Attach(champtest);
+                    context.tblChampionMetaDatas.Remove(champtest);
+                    context.SaveChanges();
             }
         }
         
@@ -151,7 +111,6 @@ namespace ChampionBrowser
 
         public static List<tblChampionMetaData> championList()
         {
-            //List<champion> myList = new List<champion>();
             using (localdbChampionModel champs = new localdbChampionModel())
             {
                 var champList = champs.tblChampionMetaDatas;
@@ -183,5 +142,22 @@ namespace ChampionBrowser
                 //Console.ReadLine();
             }
         }
+
+        /*public static List<string> getDB(string searchName)//needs tested
+        {
+            using (var db = new localdbChampionModel())
+            {
+                var query = (//from c in db.tblTests
+                             from c in db.tblChampionMetaDatas
+                                 //where c.name == "Lissandra"
+                             where c.name == searchName
+                             select new { c.passive, c.basead, c.imageLink });//test this pls
+                query.ToString();
+                var test = query.ToString();
+                List<String> result = new List<string>();
+                result.Add(test);
+                return result;
+            }
+        }*/
     }
 }
